@@ -1,7 +1,5 @@
 <h1 align="center"> :clipboard: Administración de Windows desde la Consola </h1>
 
-<p align="center">
-
 ----
 
 <details> <summary>0. Administración de Windows desde la Consola</summary>
@@ -10,10 +8,7 @@
 
 ----
 
-----
 
-<details> <summary>1. Comandos Básicos</summary>
+</details><details> <summary>1. Comandos Básicos</summary>
   
-<h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/0.%20Administraci%C3%B3n%20de%20Windows%20desde%20la%20Consola.md">Administración de Windows desde la Consola</a> </h3>
-
-----
+<h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/0.%20Administraci%C3%B3n%20de%20Windows%20desde%20la%20Consola.md">Comandos Básicos</a> </h3>
