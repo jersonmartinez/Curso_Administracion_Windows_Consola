@@ -2,19 +2,18 @@
 
 <p align="center">
 
-#### Documentación sobre cada capítulo del curso
-
-##### Cap #1: 
-
-
 ----
 
 <details> <summary>0. Administración de Windows desde la Consola</summary>
-
-### [0. Administración de Windows desde la Consola.md](0. Administración de Windows desde la Consola.md)
+  
+<h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/0.%20Administraci%C3%B3n%20de%20Windows%20desde%20la%20Consola.md">Administración de Windows desde la Consola</a> </h3>
 
 ----
 
+----
 
+<details> <summary>1. Comandos Básicos</summary>
+  
+<h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/0.%20Administraci%C3%B3n%20de%20Windows%20desde%20la%20Consola.md">Administración de Windows desde la Consola</a> </h3>
 
 ----
