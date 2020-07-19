@@ -9,7 +9,7 @@
 <h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/1.%20Comandos%20B%C3%A1sicos.md">Comandos Básicos</a> </h3>
 
 </details><details> <summary>2. Rutas de acceso</summary>
-<h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/2.%20Rutas%20de%20acceso.md">Comandos Básicos</a> </h3>
+<h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/2.%20Rutas%20de%20acceso.md">Rutas de acceso</a> </h3>
 
 </details><details> <summary>3. Gestión de directorios</summary>
 <h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/3.%20Gesti%C3%B3n%20de%20directorios.md">Gestión de directorios</a> </h3>
