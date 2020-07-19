@@ -28,3 +28,12 @@
 
 </details><details> <summary>8. Instancias</summary>
 <h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/8.%20Instancias.md">Instancias</a> </h3>
+
+</details><details> <summary>9. Máscaras y comodines</summary>
+<h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/9.%20M%C3%A1scaras%20y%20comodines.md">Máscaras y comodines</a> </h3>
+
+</details><details> <summary>10. Gestión del PROMPT</summary>
+<h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/10.%20Gesti%C3%B3n%20del%20PROMPT.md">Gestión del PROMPT</a> </h3>
+  
+</details><details> <summary>11. Teclas de funciones</summary>
+<h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/11.%20Teclas%20de%20funciones.md">Teclas de funciones</a> </h3>
