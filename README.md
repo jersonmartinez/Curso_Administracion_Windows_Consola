@@ -6,5 +6,4 @@
 
 
 </details><details> <summary>1. Comandos Básicos</summary>
-  
 <h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/1.%20Comandos%20B%C3%A1sicos.md">Comandos Básicos</a> </h3>
