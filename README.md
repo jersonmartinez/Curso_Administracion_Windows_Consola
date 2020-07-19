@@ -20,5 +20,11 @@
 </details><details> <summary>5. Árbol de directorios</summary>
 <h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/5.%20%C3%81rbol%20de%20directorios.md">Árbol de directorios</a> </h3>
   
-  </details><details> <summary>6. Copiar, mover archivos y directorios</summary>
+</details><details> <summary>6. Copiar, mover archivos y directorios</summary>
 <h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/6.%20Copiar%2C%20mover%20archivos%20y%20directorios.md">Copiar, mover archivos y directorios</a> </h3>
+
+</details><details> <summary>7. Cambiar y guardar rutas</summary>
+<h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/7.%20Cambiar%20y%20guardar%20rutas.md">Cambiar y guardar rutas</a> </h3>
+
+</details><details> <summary>8. Instancias</summary>
+<h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/8.%20Instancias.md">Instancias</a> </h3>
