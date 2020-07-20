@@ -38,7 +38,8 @@
 </details><details> <summary>11. Teclas de funciones</summary>
 <h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/11.%20Teclas%20de%20funciones.md">Teclas de funciones</a> </h3>
 
-
+</details>
+  
 ---
 
 REPOSITORIO GITHUB SOBRE <a href="https://github.com/jersonmartinez/ShellScriptBatch" target="_blank">SHELL SCRIPT BATCH</a>
