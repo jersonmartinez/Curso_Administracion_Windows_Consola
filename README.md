@@ -1,5 +1,3 @@
-./Instancias.md
-
 <h1 align="center"> :clipboard: Administración de Windows desde la Consola </h1>
 
 <details> <summary>0. Administración de Windows desde la Consola</summary>
