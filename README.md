@@ -1,4 +1,4 @@
-/Instancias.md
+./Instancias.md
 
 <h1 align="center"> :clipboard: Administración de Windows desde la Consola </h1>
 
