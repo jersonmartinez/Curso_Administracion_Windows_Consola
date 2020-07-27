@@ -4,6 +4,152 @@
   
 <h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/0.%20Administraci%C3%B3n%20de%20Windows%20desde%20la%20Consola.md">Administración de Windows desde la Consola</a> </h3>
 
+[![#0. Administración de Windows desde la Consola](https://img.youtube.com/vi/X18jJBXK8jM/maxresdefault.jpg)](https://youtu.be/X18jJBXK8jM "#0. Administración de Windows desde la Consola")
+
+**Capítulos que se estarán abordando en el curso**
+
+✅ 1. Comandos muy básicos y muy importantes
+
+✅ 2. Rutas de acceso
+
+✅ 3. Gestión de directorios
+
+✅ 4. Gestión de ficheros
+
+✅ 5. Árbol de directorios
+
+✅ 6. Copiar y Mover directorios y ficheros
+
+✅ 7. PUSHD & POPD
+
+✅ 8. Instancias | CMD
+
+✅ 9. Máscaras y Comodines
+
+✅ 10. Gestión del Prompt
+
+✅ 11. Teclas de función en la consola
+
+✅ 12. Manipulación de hora y fecha
+
+✅ 13. Tuberías | Pipes
+
+✅ 14. Direccionamiento y desvío de comandos
+
+✅ 15. Variables
+
+✅ 16. Variables de entorno
+
+✅ 17. Path - Establecer una ruta de búsqueda
+
+✅ 18. Manejo de cadenas
+
+✅ 19. Buscar y Ubicar archivos
+
+✅ 20. Comparar archivos o ficheros
+
+✅ 21. Buscar cadenas en archivos
+
+✅ 22. Compresión de archivos y directorios
+
+✅ 23. Expandir arcihvos comprimidos
+
+✅ 24. Llamadas a programas externos
+
+✅ 25. Copiar información al portapapeles
+
+✅ 26. Ordenar datos
+
+✅ 27. Asociar archivos con extensiones
+
+✅ 28. Asignación de permisos
+
+✅ 29. Vínculos simbólicos
+
+✅ 30. Información del sistema
+
+✅ 31. Apagar, Reiniciar y Cerrar sesión
+
+✅ 32. Gestión de usuarios
+
+✅ 33. Habilitar usuario Administrador
+
+✅ 34. Gestión de Procesos
+
+✅ 35. Conexiones de red
+
+✅ 36. Obtener contraseñas guardadas
+
+✅ 37. Crear red hospedada
+
+✅ 38. Enviar mensajes a usuarios
+
+✅ 39. Envío de señales
+
+✅ 40. Ejecutar como Administrador - RUNAS
+
+✅ 41. Escritorio Remoto
+
+✅ 42. Programador de Tareas
+
+✅ 43. Gestión de un servidor FTP
+
+✅ 44. Gestión de un servidor DHCP
+
+✅ 45. Gestión de un servidor DNS
+
+✅ 46. Bitlocker
+
+✅ 47. Etiquetar discos
+
+✅ 48. Unidad Virtual
+
+✅ 49. Liberar espacio en disco
+
+✅ 50. Optimizar y desfragmentar disco
+
+✅ 51. Comprobar disco y mostrar información de estado
+
+✅ 52. Formatear discos
+
+✅ 53. Crear particiones de disco
+
+✅ 54. Desmontar, Extender volúmenes de disco
+
+✅ 55. Recuperar información
+
+✅ 56. Examinar integridad de los datos
+
+✅ 57. Uso de Robocopy
+
+✅ 58. Backups
+
+✅ 59. Comprobar la seguridad en el sistema
+
+✅ 60. Gestiona Credenciales Almacenadas
+
+✅ 61. Información de rendimiento de recursos
+
+✅ 62. Configuración de Energía
+
+✅ 63. Gestionar Servicios
+
+✅ 64. Windows To Go
+
+✅ 65. Utilidad de zona horaria de Windows
+
+✅ 66. Administración de Windows - WMIC
+
+✅ 67. Registros
+
+✅ 68. CURL
+
+✅ 69. SHELL
+
+✅ 70. Papelera de reciclaje (Esto se solicitó hace un par de días)
+
+---
+
 
 </details><details> <summary>1. Comandos Básicos</summary>
 <h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/1.%20Comandos%20B%C3%A1sicos.md">Comandos Básicos</a> </h3>
