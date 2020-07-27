@@ -1551,7 +1551,6 @@ Tecla de función o combinación | Descripción
 
 En la consola, presionar: `ALT + ENTER`
 
----
 
 </details>
   
