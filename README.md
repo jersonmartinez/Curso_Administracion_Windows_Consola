@@ -908,6 +908,31 @@ los que no se encontraron.
 
 </details><details> <summary>5. Árbol de directorios</summary>
 <h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/5.%20%C3%81rbol%20de%20directorios.md">Árbol de directorios</a> </h3>
+
+[![#5. Árbol de directorios - Administración de Windows desde la Consola](https://img.youtube.com/vi/mQgjiaEd0b0/maxresdefault.jpg)](https://youtu.be/mQgjiaEd0b0 "#5. Árbol de directorios - Administración de Windows desde la Consola")
+
+En esta oportunidad, te enseñaré cómo generar un dibujo sobre un árbol de directorios tanto con interfaz gráfica como por Consola, además de escribirlo y leerlo en un archivo específico. Además de el uso de una variable de entorno.
+
+Los comandos utilizados son: 
+Comando | Descripción
+------------ | -------------
+✔ TREE | Copia uno o más archivos en otra ubicación.
+✔ TYPE | Muestra el contenido de uno o más archivos de texto. (Este comando ya ha sido especificado en [este documento](../master/4.%20Gesti%C3%B3n%20de%20ficheros%20o%20archivos.md "Gestión de ficheros o archivos"))
+
+---
+
+**TREE**
+
+```
+Muestra de forma gráfica la estructura de carpetas de una unidad o ruta.
+
+TREE [unidad:][ruta] [/F] [/A]
+
+   /F    Muestra los archivos de cada carpeta.
+   /A    Usa ASCII en lugar de caracteres extendidos.
+```
+
+---
   
 </details><details> <summary>6. Copiar, mover archivos y directorios</summary>
 <h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/6.%20Copiar%2C%20mover%20archivos%20y%20directorios.md">Copiar, mover archivos y directorios</a> </h3>
