@@ -577,6 +577,158 @@ Fuente de información: <a href="https://desktop.arcgis.com/es/arcmap/10.3/tools
 </details><details> <summary>3. Gestión de directorios</summary>
 <h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/3.%20Gesti%C3%B3n%20de%20directorios.md">Gestión de directorios</a> </h3>
 
+[![#3. Gestión de directorios - Administración de Windows desde la Consola](https://img.youtube.com/vi/wdpOx-evxWs/maxresdefault.jpg)](https://youtu.be/wdpOx-evxWs "#3. Gestión de directorios - Administración de Windows desde la Consola")
+
+### Gestión de directorios
+
+Te enseño sobre gestión de directorios, que incluye diferentes formas para crear, eliminar y listar. 
+
+Algunos comandos interesantes que se muestran son: 
+
+Comando | Descripción
+------------ | -------------
+✔ MD - MKDIR | Crea un directorio. `(MD = Make Directory)`
+✔ RD | Quita (elimina) un directorio `(RD = Remove Directory)`
+✔ DIR | Muestra la lista de subdirectorios y archivos de un directorio.
+✔ MORE | Muestra la información pantalla a pantalla.
+
+---
+
+**MD - MKDIR**
+
+```
+Crea un directorio.
+
+MKDIR [unidad:]ruta
+MD [unidad:]ruta
+
+Si las extensiones de comandos están habilitadas, MKDIR cambia así:
+
+MKDIR crea cualquier directorio intermedio de la ruta de acceso siempre 
+que sea necesario. Por ejemplo, si \a no existe:
+
+    mkdir \a\b\c\d
+
+es lo mismo que:
+
+    mkdir \a
+    chdir \a
+    mkdir b
+    chdir b
+    mkdir c
+    chdir c
+    mkdir d
+
+que es lo que hubiese tenido que escribir si las extensiones estuvieran
+deshabilitadas.
+```
+
+**RD - RMDIR**
+
+```
+Quita (elimina) un directorio.
+
+RMDIR [/S] [/Q] [unidad:]ruta
+RD [/S] [/Q] [unidad:]ruta
+
+    /S     Quita todos los directorios y archivos del directorio además 
+           del mismo directorio. Se usa principalmente cuando se 
+           desea quitar un árbol.
+
+    /Q     Modo silencioso, no pide confirmación para quitar un árbol
+           de directorio con /S
+```
+
+**DIR**
+
+```
+Muestra la lista de subdirectorios y archivos de un directorio.
+
+DIR [drive:][path][filename] [/A[[:]attributes]] [/B] [/C] [/D] [/L] [/N]
+  [/O[[:]sortorder]] [/P] [/Q] [/R] [/S] [/T[[:]timefield]] [/W] [/X] [/4]
+
+  [drive:][path][filename]
+              Especifica la unidad, el directorio o los archivos que se mostrarán.
+
+  /A          Muestra los archivos con los atributos especificados.
+  Atributos    D  Directorios             R  Archivos de solo lectura
+               H  Archivos ocultos        A  Archivos listos para el archivado
+               S  Archivos de sistema     I  Archivos indizados que no son de contenido
+               L  Puntos de rean lisis             O  Archivos sin conexión
+               -  Prefijo de exclusión
+  /B          Usa el formato simple (sin encabezados ni resúmenes).
+  /C          Muestra el separador de miles en los tamaños de los archivos. Es la opción
+              predeterminada. Usa /-C para deshabilitar la aparición del separador.
+  /D          Similar al listado ancho, pero los archivos aparecen en una lista ordenada por columnas.
+  /L          Usa letras minúsculas.
+  /N          Nuevo formato de lista larga donde los nombre de archivo aparecen en el lado derecho.
+  /O          Muestra los archivos según el orden indicado.
+  sortorder        N  Por nombre (orden alfabético)       S  Por tamaño (orden creciente)
+               E  Por extensión (orden alfabético)  D  Por fecha y hora (el m s antiguo primero)
+               G  Agrupa primero los directorios -  Prefijo para invertir el orden
+  /P          Hace una pausa después de cada pantalla completa de información.
+  /Q          Muestra el propietario del archivo.
+  /R          Muestra las secuencias alternativas de datos del archivo.
+  /S          Muestra los archivos del directorio especificado y todos sus subdirectorios.
+  /T          Controla el campo de hora que se mostrar  o usar  para realizar la ordenación.
+  timefield       C  Creación
+              A  último acceso
+              W  última modificación
+  /W          Usa el formato de listado ancho.
+  /X          Muestra los nombres cortos generados para los nombres
+              de archivo sin formato 8dot3. El formato es el mismo que para /N, con el nombre corto especificado
+              antes del nombre largo. Si no existe ningún nombre corto, se muestran
+              espacios en blanco en su lugar.
+  /4          Muestra los años con 4 d¡gitos.
+
+Los modificadores se pueden preestablecer en la variable de entorno DIRCMD.
+Para invalidar los modificadores prestablecidos, se debe agregar un prefijo a cada modificador con - (guión), por ejemplo: /-W.
+```
+
+**MORE**
+
+```
+Muestra la información pantalla a pantalla.
+
+MORE [/E [/C] [/P] [/S] [/Tn] [+n]] < [unidad:][ruta]archivo
+comando | MORE [/E [/C] [/P] [/S] [/Tn] [+n]]
+MORE /E [/C] [/P] [/S] [/Tn] [+n] [archivos]
+
+    [unidad:][ruta]archivo  Especifica un archivo para mostrar
+                            pantalla a pantalla.
+
+    comando                 Especifica el comando que ser 
+                            mostrado.
+
+    /E       Habilita las opciones avanzadas
+    /C       Limpia la pantalla antes de mostrar la página
+    /P       Expande los caracteres de avance de línea
+    /S       Compacta múltiples líneas en blanco en una sola línea
+    /Tn      Expande las tabulaciones a n espacios (de forma predeterminada 8)
+
+             Se pueden usar modificadores con las variables
+             de entorno de MORE.
+
+    +n       Empieza mostrando el primer archivo en la línea n
+
+    archivos Lista de archivos que se desean mostrar. Los archivos
+             de la lista están separados por espacios.
+
+    Si las opciones avanzadas están activadas, los siguientes comandos
+    son aceptados en el símbolo de -- M s --:
+
+    P n       Mostrar las siguientes n líneas
+    S n       Saltarse las siguientes n líneas
+    F         Mostrar el siguiente archivo
+    Q         Salir
+    =         Mostrar el número de línea
+    ?         Mostrar la línea de ayuda
+    <espacio> Mostrar la siguiente página
+    <entrar>  Mostrar la siguiente línea
+```
+
+---
+
 </details><details> <summary>4. Gestión de ficheros o archivos</summary>
 <h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/4.%20Gesti%C3%B3n%20de%20ficheros%20o%20archivos.md">Gestión de ficheros o archivos</a> </h3>
 
