@@ -937,6 +937,109 @@ TREE [unidad:][ruta] [/F] [/A]
 </details><details> <summary>6. Copiar, mover archivos y directorios</summary>
 <h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/6.%20Copiar%2C%20mover%20archivos%20y%20directorios.md">Copiar, mover archivos y directorios</a> </h3>
 
+[![#6. Copiar, mover archivos y directorios - Administración de Windows desde la Consola](https://img.youtube.com/vi/_nv6hr0-trA/maxresdefault.jpg)](https://youtu.be/_nv6hr0-trA "#6. Copiar, mover archivos y directorios - Administración de Windows desde la Consola")
+
+En esta oportunidad, te enseñaré cómo copiar y mover árboles de directorios y archivos, realizando prácticas para crear respaldos y filtros por medio de comodines.
+
+Los comandos utilizados son: 
+
+Comando | Descripción
+------------ | -------------
+✔ COPY | Copia uno o más archivos en otra ubicación. (Este comando ya ha sido especificado en [este documento](../master/4.%20Gesti%C3%B3n%20de%20ficheros%20o%20archivos.md "Gestión de ficheros o archivos"))
+✔ XCOPY | Copia árboles de directorios y archivos.
+✔ TYPE CON | Inicia un contexto donde tienes acceso a escribir el contenido que se guardará en el fichero direccionado.
+✔ MOVE | Mueve archivos y cambia el nombre a archivos y directorios. (Este comando ya ha sido especificado en [este documento](../master/4.%20Gesti%C3%B3n%20de%20ficheros%20o%20archivos.md "Gestión de ficheros o archivos"))
+
+---
+
+**XCOPY**
+
+```
+Copia árboles de directorios y archivos.
+
+XCOPY source [destination] [/A | /M] [/D[:fecha]] [/P] [/S [/E]] [/V] [/W]
+                           [/C] [/I] [/Q] [/F] [/L] [/G] [/H] [/R] [/T] [/U]
+                           [/K] [/N] [/O] [/X] [/Y] [/-Y] [/Z] [/B] [/J]
+                           [/EXCLUDE:archivo1[+archivo2][+archivo3]...]
+
+  source       Especifica los archivos que se copiar n.
+  destination      Especifica la ubicación y/o el nombre de los archivos nuevos.
+  /A           Copia solo archivos con el atributo de archivo establecido; 
+               no cambia el atributo.
+  /M           Copia solo archivos con el atributo de archivo de establecido;
+               desactiva el atributo de archivo.
+  /D:m-d-y     Copia archivos cambiados durante o después de la fecha
+               especificada. Si no se especifica una fecha, copia solo los
+               archivos cuya fecha de origen es más reciente que la fecha de
+               destino.
+  /EXCLUDE:archivo1[+archivo2][+archivo3]...
+               Especifica una lista de archivos que contienen cadenas. Los
+               archivos deben tener una cadena por línea. Cuando cualquiera
+               de las cadenas coincida con cualquier parte de la ruta de
+               acceso absoluta del archivo que se debe copiar,
+               ese archivo se excluir  de la copia. Por ejemplo, si
+               especifica una cadena como \obj\ u .obj, se excluir n todos
+               los archivos ubicados en el directorio obj o todos los
+               archivos con la extensión .obj, respectivamente.
+  /P           Pregunta antes de crear cada archivo de destino.
+  /S           Copia directorios y subdirectorios, excepto los vacíos.
+  /E           Copia directorios y subdirectorios, incluidos los vacíos.
+               Igual que /S /E. Se puede usar para modificar /T.
+  /V           Comprueba el tamaño de cada archivo nuevo.
+  /W           Pide que se presione una tecla antes de copiar.
+  /C           Continúa copiando incluso si ocurren errores.
+  /I           Si el destino no existe y se est  copiando más de un archivo,
+               se da por supuesto que el destino debe ser un directorio.
+  /Q           No muestra nombres de archivo mientras copia.
+  /F           Muestra los nombres completos de los archivos de origen y
+               de destino mientras realiza la copia.
+  /L           Muestra los archivos que se copiar n.
+  /G           Permite la copia de archivos cifrados en un destino que no es
+               compatible con el cifrado.
+  /H           Copia archivos ocultos y tambi‚n archivos del sistema.
+  /R           Sobrescribe archivos de solo lectura.
+  /T           Crea una estructura de directorios, pero no copia archivos. No
+               incluye directorios o subdirectorios vacíos. /T /E incluye
+               directorios y subdirectorios vacíos.
+  /U           Copia solo archivos que ya existen en el destino.
+  /K           Copia atributos. Xcopy normal restablecer  los atributos
+               de solo lectura.
+  /N           Realiza la copia con los nombres cortos generados.
+  /O           Copia la propiedad de archivos y la información de ACL.
+  /X           Copia la configuración de la auditoría de archivos
+               (implica /O).
+  /Y           Suprime la petición de confirmación de sobrescritura de un
+               archivo de destino existente.
+  /-Y          Pide confirmación de sobrescritura de un archivo
+               de destino existente.
+  /Z           Copia archivos de red en modo reiniciable.
+  /B           Copia el vínculo simbólico en vez del destino del vínculo.
+  /J           Copia con E/S no almacenada en el búfer. Recomendado para
+               archivos muy grandes.
+
+El modificador /Y puede preestablecerse en la variable de entorno COPYCMD.
+Esto se puede reemplazar con /-Y en la línea de comandos.
+```
+
+**TYPE CON**
+
+```
+Muestra el contenido de uno o más archivos de texto.
+
+TYPE [unidad:][ruta]archivo
+
+Este comando por si mismo, ya ha sido especificado en un documento 
+anterios, sin embargo, tiene una variante, se trata del subcomando CON, que 
+ejecuta un contexto donde se puede agregar contenido y el comando anterior 
+TYPE lo que hará, después de un ENTER de haber escrito el texto, expulsarlo por pantalla. 
+
+Lo mismo pasaría si se desea ocupar CON con otro comando, bien podría ser
+COPY CON, que lo que hará es copiar el contenido escrito a un archivo en 
+específico o bien, brindar una salida que la obtiene del buffer.
+```
+
+---
+
 </details><details> <summary>7. Cambiar y guardar rutas</summary>
 <h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/7.%20Cambiar%20y%20guardar%20rutas.md">Cambiar y guardar rutas</a> </h3>
 
