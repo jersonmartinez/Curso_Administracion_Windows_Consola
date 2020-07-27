@@ -1043,6 +1043,53 @@ específico o bien, brindar una salida que la obtiene del buffer.
 </details><details> <summary>7. Cambiar y guardar rutas</summary>
 <h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/7.%20Cambiar%20y%20guardar%20rutas.md">Cambiar y guardar rutas</a> </h3>
 
+[![#7. Cambiar y guardar rutas - Administración de Windows desde la Consola](https://img.youtube.com/vi/qCSFDkwzLEo/maxresdefault.jpg)](https://youtu.be/qCSFDkwzLEo "#7. Cambiar y guardar rutas - Administración de Windows desde la Consola")
+
+En esta oportunidad, te enseñaré cómo cambiarse, almacenar y recuperar rutas utilizando los comandos POPD y PUSHD.
+
+Comando | Descripción
+------------ | -------------
+✔ POPD | Cambia al directorio guardado por el comando PUSHD.
+✔ PUSHD | Guarda el directorio actual para que lo use el comando POPD y después cambia al directorio especificado.
+
+---
+
+**POPD**
+
+```
+Cambia al directorio guardado por el comando PUSHD.
+
+POPD
+
+Si las extensiones de comando están habilitadas, el comando POPD eliminar 
+todas las letras de unidad temporales creadas por PUSHD cuando active
+el comando POPD, que libera la pila de directorios.
+
+```
+
+**PUSHD**
+
+```
+Guarda el directorio actual para que lo use el comando POPD y después
+cambia al directorio especificado.
+
+PUSHD [ruta | ..]
+
+ ruta        Especifica el directorio al que hay que cambiar el actual.
+
+Si las extensiones de comando están habilitadas, PUSHD acepta
+rutas de red además de la letra normal de unidad y la ruta.
+Si se especifica la ruta de red, PUSHD crear  una letra de unidad
+temporal que señalar  el recurso de red específico y después cambiar 
+la unidad y el directorio actuales con letras de unidades
+recientemente definidas. Las letras de unidades temporales ser n
+asignadas desde la Z: hacia abajo con la primera letra de unidad
+que se encuentre libre.
+
+```
+
+---
+
 </details><details> <summary>8. Instancias</summary>
 <h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/8.%20Instancias.md">Instancias</a> </h3>
 
