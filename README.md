@@ -1351,6 +1351,178 @@ Los comodines utilizados por `FORFILES` no son estándar, pero son similares a l
 
 </details><details> <summary>10. Gestión del PROMPT</summary>
 <h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/10.%20Gesti%C3%B3n%20del%20PROMPT.md">Gestión del PROMPT</a> </h3>
+
+[![#10. Gestión del PROMPT - Administración de Windows desde la Consola](https://img.youtube.com/vi/q71bisp9q4c/maxresdefault.jpg)](https://youtu.be/q71bisp9q4c "#10. Gestión del PROMPT - Administración de Windows desde la Consola")
+
+En esta oportunidad, te enseñaré cómo gestionar el prompt de la consola desde aspectos básicos hasta avanzado, personalizando el estilo de línea de comandos de la terminal, además que aprenderás un poco sobre variables de entorno y algunas herramientas interesantes.
+
+Algunos nuevos comandos son: 
+
+Comando | Descripción
+------------ | -------------
+✔ PROMPT | Cambia el símbolo del sistema de cmd.exe.
+✔ SETX | Crea o modifica variables de entorno en el entorno de usuario o de sistema.
+
+**PROMPT**
+
+```
+Cambia el símbolo del sistema de cmd.exe.
+
+PROMPT [text]
+
+  text    Especifica un nuevo símbolo del sistema.
+
+En el símbolo del sistema se pueden escribir caracteres normales y los siguientes códigos especiales:
+
+  $A   & (Y comercial)
+  $B   | (barra vertical)
+  $C   ( (parántesis izquierdo)
+  $D   Fecha actual
+  $E   Código de escape (código ASCII 27)
+  $F   ) (parántesis derecho)
+  $G   > (signo mayor que)
+  $H   Retroceso (borra el carácter previo)
+  $L   < (signo menor que)
+  $N   Unidad actual
+  $P   Unidad y ruta de acceso actual
+  $Q   = (signo igual)
+  $S     (espacio)
+  $T   Hora actual
+  $V   Número de versión de Windows
+  $_   Retorno de carro y alimentación de línea
+  $$   $ (signo del dólar)
+
+Si las Extensiones de comando están habilitadas, el comando PROMPT
+admite los siguientes caracteres de formato adicionales:
+
+  $+   cero o más caracteres de signo "más" (+) en función de la
+       profundidad del directorio de pila PUSHD, un carácter por cada 
+       nivel insertado.
+
+  $M   Muestra el nombre remoto asociado a la letra de unidad actual
+       o la cadena vacía si la unidad actual no es una unidad de red.
+```
+
+**SETX**
+
+```
+
+SetX tiene tres formas de trabajo: 
+
+Sintaxis 1:
+    SETX [/S sistema [/U [dominio\]usuario [/P [contraseña]]]] valor var [/M]
+
+Sintaxis 2:
+    SETX [/S sistema [/U [dominio\]usuario [/P [contraseña]]]] var
+         /K ruta del Registro [/M]
+
+Sintaxis 3:
+    SETX [/S sistema [/U [dominio\]usuario [/P [contraseña]]]]
+         /F archivo {var {/A x,y | /R cadena x,y}[/M] | /X} [/D delimitadores]
+
+Descripción:
+    Crea o modifica variables de entorno en el entorno de usuario o de
+    sistema. Puede establecer variables basadas en argumentos, claves de
+    Registro o entrada de archivos.
+
+Lista de par metros:
+    /S   sistema             Especifica el sistema remoto al que conectarse.
+
+    /U   [dominio\]usuario   Especifica el contexto de usuario en el que
+                             el comando debe ejecutarse.
+
+    /P   [contraseña]        Especifica la contraseña para el contexto
+                             de usuario dado. Pide entrada si se omite.
+
+    var                      Especifica la variable de entorno que se va a
+                             establecer.
+
+    valor                    Especifica el valor que se va a asignar a la
+                           variable de entorno.
+
+    /K   Ruta de Registro    Especifica que la variable está basada
+                           en información de una clave del Registro.
+                           La ruta de acceso debe especificarse en el formato
+                           sub rbol\clave\...\valor. Por ejemplo,
+                           HKEY_LOCAL_MACHINE\System\CurrentControlSet\
+                           Control\TimeZoneInformation\StandardName
+
+    /F   archivo             Especifica el nombre del archivo de texto
+                           que se va a usar.
+
+    /A   x,y                 Especifica coordenadas absolutas de archivo
+                           (línea X, elemento Y) como par metros de búsqueda 
+                           dentro del archivo.
+
+    /R   cadena x,y          Especifica coordenadas relativas de archivo
+                           respecto a "cadena" como par metros de búsqueda.
+
+    /M                       Especifica que la variable debe establecerse en
+                           el entorno (HKEY_LOCAL_MACHINE) de todo el
+                           sistema. El valor predeterminado es establecer la
+                           variable bajo el entorno HKEY_CURRENT_USER. 
+                           
+    /X                       Muestra el contenido de archivos con coordenadas
+                             x,y.
+
+    /D   delimitadores       Especifica delimitadores adicionales, como ","
+                           o "\". Los delimitadores integrados son espacio,
+                           tabulador, retorno de carro y salto de línea. 
+                           Cualquier carácter ASCII se puede usar como
+                           delimitador adicional. El número máximo de
+                           delimitadores, incluidos los delimitadores
+                           integrados, es de 15.
+
+    /?                       Muestra este mensaje de ayuda.
+
+NOTA: 1) SETX escribe variables en el entorno maestro del Registro.
+
+      2) En un sistema local, las variables creadas o modificadas con esta
+         herramienta estar n disponibles en futuras ventanas de comandos, pero 
+         no en la ventana de comandos CMD.exe actual.
+
+      3) En un sistema remoto, las variables creadas o modificadas con esta
+         herramienta estar n disponibles en la siguiente sesión de inicio.
+
+      4) Los tipos de datos v lidos de clave del Registro son REG_DWORD,
+         REG_EXPAND_SZ,REG_SZ, REG_MULTI_SZ.
+
+      5) Sub rboles compatibles:  HKEY_LOCAL_MACHINE (HKLM),
+         HKEY_CURRENT_USER (HKCU).
+
+      6) Los delimitadores distinguen entre mayúsculas y minúsculas.
+
+      7) Los valores REG_DWORD se extraen del Registro en formato 
+         decimal.
+
+Ejemplos:
+    SETX MACHINE COMPAQ 
+    SETX MACHINE "COMPAQ COMPUTER" /M
+    SETX MYPATH "%PATH%"
+    SETX MYPATH ~PATH~
+    SETX /S sistema /U usuario /P contraseña  MACHINE COMPAQ 
+    SETX /S sistema /U usuario /P contraseña MYPATH ^%PATH^% 
+    SETX TZONE /K HKEY_LOCAL_MACHINE\System\CurrentControlSet\
+         Control\TimeZoneInformation\StandardName
+    SETX BUILD /K "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows
+         NT\CurrentVersion\CurrentBuildNumber" /M
+    SETX /S sistema /U usuario /P contraseña TZONE /K HKEY_LOCAL_MACHINE\
+         System\CurrentControlSet\Control\TimeZoneInformation\
+         StandardName
+    SETX /S sistema /U usuario /P contraseña  BUILD /K 
+         "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\
+         CurrentVersion\CurrentBuildNumber" /M
+    SETX /F ipconfig.out /X 
+    SETX IPADDR /F ipconfig.out /A 5,11 
+    SETX OCTET1 /F ipconfig.out /A 5,3 /D "#$*." 
+    SETX IPGATEWAY /F ipconfig.out /R 0,7 Gateway
+    SETX /S sistema /U usuario /P contraseña  /F c:\ipconfig.out /X
+```
+
+
+`ColorTool:` https://github.com/Microsoft/Terminal/tree/master/src/tools/ColorTool
+
+---
   
 </details><details> <summary>11. Teclas de funciones</summary>
 <h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/11.%20Teclas%20de%20funciones.md">Teclas de funciones</a> </h3>
