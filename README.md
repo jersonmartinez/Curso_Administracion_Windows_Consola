@@ -1093,8 +1093,261 @@ que se encuentre libre.
 </details><details> <summary>8. Instancias</summary>
 <h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/8.%20Instancias.md">Instancias</a> </h3>
 
+[![#8. Instancias - Administración de Windows desde la Consola](https://img.youtube.com/vi/BJ39yF2LcMI/maxresdefault.jpg)](https://youtu.be/BJ39yF2LcMI "#8. Instancias - Administración de Windows desde la Consola")
+
+En está oportunidad, te enseñaré cómo iniciar una nueva instancia del intérprete de comandos de sistema, además de mostrarte el desarrollo e implementación de un script básico. 
+
+**El comando en cuestión es `CMD`.**
+
+```
+Inicia una nueva instancia del intérprete de comandos de Windows
+
+
+CMD [/A | /U] [/Q] [/D] [/E:ON | /E:OFF] [/F:ON | /F:OFF] [/V:ON | /V:OFF]
+   [[/S] [/C | /K] cadena]
+
+
+/C      Ejecuta el comando especificado en cadena y luego finaliza
+
+/K      Ejecuta el comando especificado en cadena pero sigue activo
+
+/S      Modifica el tratamiento de cadena después de /C o /K (consultar más 
+        abajo)
+/Q      Desactiva el eco
+
+/D      Deshabilita le ejecución de los comandos de AutoRun del Registro 
+        (consultar más abajo)
+
+/A      Usa ANSI para la salida de comandos internos hacia una canalización o
+        un archivo
+/U      Usa Unicode para la salida de comandos internos hacia una
+        canalización o un archivo
+/T:fg   Configura los colores de primer y segundo plano (para obtener más 
+        información, consulte COLOR /?)
+
+/E:ON   Habilita las extensiones de comando (consultar más abajo)
+/E:OFF  Deshabilita las extensiones de comando (consultar más abajo)
+
+/F:ON    Habilita los caracteres de terminación de los nombres de archivos y 
+        directorios (consultar más abajo)
+
+/F:OFF  Deshabilita los caracteres de terminación de los nombres de archivos y 
+        directorios (consultar más abajo)
+
+/V:ON   Habilita la extensión de variables de entorno retrasada con !
+         como delimitador. Por ejemplo, /V:ON permitirá que !var! extiende
+       la variable var en tiempo de ejecución.  La sintaxis var extiende 
+        variables en tiempo de entrada, lo que es bastante diferente cuando se está dentro de un bucle FOR.
+
+/V:OFF  Deshabilita la extensión de variables de entorno retrasada.
+
+
+Tenga en cuenta que los comandos múltiples separados por el separador de 
+comandos '&' se aceptan como cadena si están entre comillas. Por razones de 
+compatibilidad, /X equivale a /E:ON, /Y equivale a /E:OFF y /R equivale a
+//C. Se omitirá cualquier otro tipo de modificador.
+
+
+Si se especifica /C o /K, lo que viene después de la línea de comandos
+se ejecuta como línea de comandos, siguiendo la lógica siguiente para procesar caracteres de comillas ("):
+
+    1.  Se conservan las comillas del comando si se cumplen todas las
+        condiciones siguientes:
+
+        - no aparece el modificador /S
+        - hay exactamente dos caracteres de comillas
+        - no hay caracteres especiales entre ambas comillas, siendo los,
+          caracteres especiales: &<>()@^|
+        - hay uno o más espacios en blanco entre ambas comillas
+        - la cadena entre ambas comillas es el nombre de un archivo ejecutable.
+
+    2.  En caso contrario, el comportamiento clásico es comprobar si el
+        primer carácter es una comilla y de ser así, quitar ésta y
+        también la última comilla de la línea de comandos, conservando el
+        texto que venga después de ésta.
+
+Si no se especificó /D en la línea de comandos, cuando CMD.EXE se inicie,
+buscará las variables del Registro REG_SZ/REG_EXPAND_SZ, y si alguna de 
+ellas está presente, se ejecutarán en primer lugar.
+
+    HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\AutoRun
+
+        y (o)
+
+    HKEY_CURRENT_USER\Software\Microsoft\Command Processor\AutoRun
+
+Las extensiones de comando están habilitadas de forma predeterminada. Puede
+deshabilitar las extensiones de una invocación particular con el modificador
+/E:OFF. Puede habilitar o deshabilitar las extensiones de todas las
+invocaciones de CMD.EXE en una sesión de inicio de usuario o de equipo si
+estáblece con
+REGEDIT.EXE los dos valores de REG_DWORD del Registro siguientes:
+
+  HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\EnableExtensions
+
+     y/o
+
+  HKEY_CURRENT_USER\Software\Microsoft\Command Processor\EnableExtensions
+
+en 0x1 o 0x0.  La configuración específica del usuario tiene preferencia
+respecto a la del equipo. Los modificadores de la línea de comandos tienen
+prioridad sobre la configuración del Registro.
+
+En un archivo por lotes, los argumentos SETLOCAL ENABLEEXTENSIONS o
+DISABLEEXTENSIONS tienen prioridad sobre los modificadores /E:ON o /E:OFF.
+Para obtener información más detallada, vea SETLOCAL /?.
+
+Las extensiones de comando implican cambios y ampliaciones en los
+siguientes comandos:
+
+    DEL o ERASE
+    COLOR
+    CD o CHDIR
+    MD o MKDIR
+    PROMPT
+    PUSHD
+    POPD
+    SET
+    SETLOCAL
+    ENDLOCAL
+    IF
+    FOR
+    CALL
+    SHIFT
+    GOTO
+    START (también incluye cambios en la invocación de comandos externos)
+    ASSOC
+    FTYPE
+
+Para obtener detalles específicos, escriba nombreDelComando /?.
+
+La expansión de variables de entorno retrasada NO está habilitada de forma
+predeterminada. Puede habilitar o deshabilitar la expansión de variables de
+entorno retrasada para una invocación particular de CMD.EXE con los
+modificadores /V:ON o /V:OFF. Puede habilitar o deshabilitar la expansión
+retrasada para todas las invocaciones de CMD.EXE en una sesión de inicio de
+usuario o equipo si estáblece con REGEDIT.EXE los dos valores de REG_DWORD del
+Registro siguientes:
+
+  HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\DelayedExpansion
+
+      y/o
+
+  HKEY_CURRENT_USER\Software\Microsoft\Command Processor\DelayedExpansion
+
+en 0x1 o 0x0. La configuración específica del usuario tiene prioridad sobre la
+configuración del equipo. Los modificadores de la línea de comandos tienen
+prioridad sobre la configuración del Registro.
+
+En un archivo por lotes, los argumentos SETLOCAL ENABLEDELAYEDEXPANSION o
+DISABLEDELAYEDEXPANSION tienen prioridad sobre los modificadores /V:ON o
+/V:OFF. Para obtener información más detallada, vea SETLOCAL /?.
+
+Si la expansión de variables de entorno retrasada está habilitada, se puede
+usar el carácter de exclamación para sustituir el valor de la variable de
+entorno en tiempo de ejecución.
+
+Puede habilitar o deshabilitar la terminación de un nombre de archivo
+para una invocación particular de CMD.EXE con el modificador /F:ON o /F:OFF.
+Se puede habilitar o deshabilitar la terminación para todas las invocaciones
+de CMD.EXE en una sesión de inicio de equipo o de usuario estábleciendo
+cualquiera de los dos siguientes valores REG_DWORD en el Registro con
+REGEDT.EXE:
+
+    HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\CompletionChar
+    HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\PathCompletionChar
+
+        y/o
+
+    HKEY_CURRENT_USER\Software\Microsoft\Command Processor\CompletionChar
+    HKEY_CURRENT_USER\Software\Microsoft\Command Processor\PathCompletionChar
+
+con el valor hex de un carácter de control para usarlo en una función
+particular (por ej. 0x4 es Ctrl-D y 0x6 es Ctrl-F). La configuración de
+usuario específica tiene precedencia sobre la configuración de la m quina.
+Los modificadores de la línea de comandos tiene precedencia sobre la
+configuración del Registro.
+
+Si la terminación está habilitada con el modificador /F:ON, los dos caracteres 
+de control usados son Ctrl-D para la terminación del nombre del directorio y
+Ctrl-F para la terminación del nombre de archivo.  Para deshabilitar una
+terminación de carácter determinada en el Registro, use el valor del
+espacio en blanco (0x20), ya que no es un carácter de control v lido.
+
+Se invoca la terminación cuando se escriben cualquiera de los dos caracteres
+de control. La función de terminación, desplaza el contenido de la ruta de
+acceso hacia la izquierda del cursor, le anexa un carácter comodín si no
+hay ninguno todavía presente y genera una lista de rutas de acceso que
+coincidan. Después muestáa la primera ruta de acceso que coincida. Si no
+coincide ninguna ruta de acceso, emite un sonido y no muestáa nada.
+Posteriormente, el presionar repetidamente el mismo carácter de control se
+desplazará a través de la lista de las rutas de acceso que coinciden. Si
+presiona la tecla Mayús con el carácter de control se moverá a través de la
+lista hacia atrás.  Si se edita la línea de cualquier manera y presiona el
+carácter de control de nuevo, la lista de ruta de acceso guardada es anulada
+y se generará una nueva. Ocurrirá lo mismo si pasa de una terminación de
+nombre de archivo a uno de directorio. La única diferencia entre los dos
+caracteres de control es que la terminación del carácter del archivo
+coincide con ambos nombres del archivo y del directorio, mientras que la
+terminación del carácter del directorio solo coincide con los nombres del
+directorio. Si la terminación del archivo es usada en cualquier construcción
+de comandos de directorio (CD, MD o RD) entonces se asume la terminación
+del directorio.
+
+El código de terminación trata adecuadamente con nombres de archivo que
+contienen espacios u otros caracteres especiales colocando comillas entre
+la ruta de acceso que coincide. También, si se hace una copia de seguridad,
+se llamará a una terminación dentro de la misma línea, el texto a la derecha
+del cursor que fue llamado en el punto de la terminación es descartado.
+
+Los caracteres especiales que requieren comillas son:
+     <espacio>
+     &()[]{}^=;!'+,`~
+```
+
+---
+
 </details><details> <summary>9. Máscaras y comodines</summary>
 <h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/9.%20M%C3%A1scaras%20y%20comodines.md">Máscaras y comodines</a> </h3>
+
+[![#9. Máscaras y comodines - Administración de Windows desde la Consola](https://img.youtube.com/vi/wfGxWz3NYV4/maxresdefault.jpg)](https://youtu.be/wfGxWz3NYV4 "#9. Máscaras y comodines - Administración de Windows desde la Consola")
+
+En esta oportunidad, te enseñaré sobre máscaras y comodines, donde un par de mágicos metacaracteres te harán la vida más fácil al momento de filtrar datos y aplicar acciones.
+
+**Reglas de coincidencia de comodines**
+
+**`*`**
+
+Generalmente coincide con 0 o más caracteres, con una excepción (ver la 
+siguiente regla). El comodín no codicioso es libre de combinar tantos o tan 
+pocos caracteres como sean necesarios para que coincida el resto de la máscara.
+
+
+**`*.`**
+
+Al final de la máscara coincide con 0 o más caracteres, excepto {punto}. En realidad, la regla se aplica con cualquier número de caracteres {punto} y {space} entre el * y el terminal {punto}. La expresión regular para este término es "[*] [.] * [.] $"
+
+
+**`?`**
+
+Haga coincidir 0 o un carácter, excepto {punto}.
+La única vez que coincide con 0 caracteres es cuando coincide con el final del nombre o la posición antes de un {punto}.
+El signo de interrogación también se puede usar más de una vez para unir más de un carácter.
+
+
+**Los comodines son compatibles con los siguientes comandos:**
+
+```
+ATTRIB, CACLS, CIPER, COMPACT, COPY, DEL, DIR, EXPAND, EXTRACT, FIND, FINDSTR, FOR, FORFILES, FTP, ICACLS, IF EXIST, MORE, MOVE, MV, NET (* = Cualquier unidad), PERMS, PRINT, QGREP, REN,REEMPLAZAR, ROBOCOPIA, RUTA, TOMA, TIPO, DONDE, XCACLS, XCOPY
+```
+
+Los comandos `COPY` y `REN` aceptan dos conjuntos de comodines, existen algunas diferencias sutiles entre cómo se tratan, consulte la página `REN` para obtener más detalles.
+
+Los comodines utilizados por `FORFILES` no son estándar, pero son similares a los comodines utilizados en PowerShell.
+
+*Fuente: [ss64 - Máscaras y comodines](https://ss64.com/nt/syntax-wildcards.html "Máscaras y comodines")* 
+
+---
 
 </details><details> <summary>10. Gestión del PROMPT</summary>
 <h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/10.%20Gesti%C3%B3n%20del%20PROMPT.md">Gestión del PROMPT</a> </h3>
