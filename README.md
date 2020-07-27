@@ -732,6 +732,180 @@ MORE /E [/C] [/P] [/S] [/Tn] [+n] [archivos]
 </details><details> <summary>4. Gestión de ficheros o archivos</summary>
 <h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/4.%20Gesti%C3%B3n%20de%20ficheros%20o%20archivos.md">Gestión de ficheros o archivos</a> </h3>
 
+[![#4. Gestión de ficheros o archivos - Administración de Windows desde la Consola](https://img.youtube.com/vi/WVoe_xtSyUs/maxresdefault.jpg)](https://youtu.be/WVoe_xtSyUs "#4. Gestión de ficheros o archivos - Administración de Windows desde la Consola")
+
+Te enseño cómo gestionar ficheros o archivos utilizando la metodología CRUD, de crear, leer, actualizar y eliminar. Además, conocerás nuevos comandos interesantes donde se realizarán prácticas de combinaciones entre ellos.
+
+Estos comandos son: 
+
+Comando | Descripción
+------------ | -------------
+✔ COPY | Copia uno o más archivos en otra ubicación.
+✔ TYPE | Muestra el contenido de uno o más archivos de texto.
+✔ FSUTIL | Comando avanzado de Administración de Windows.
+✔ MOVE | Mueve archivos y cambia el nombre a archivos y directorios.
+✔ REN - RENAME | Cambia el nombre de uno o más archivos.
+✔ DEL | Elimina uno o más archivos.
+✔ RD | _`Remove Directory`_ (Este comando ya ha sido especificado en [este documento](../master/3.%20Gesti%C3%B3n%20de%20directorios.md "Gestión de directorios"))
+
+Las instrucciones de comandos anteriormente señaladas, son explicadas en este capítulo, el cuarto del curso de Administración de Windows desde la #Consola. 
+
+---
+
+**COPY**
+
+```
+Copia uno o más archivos en otra ubicación.
+
+COPY [/D] [/V] [/N] [/Y | /-Y] [/Z] [/L] [/A | /B ] origen [/A | /B]
+     [+ origen [/A | /B] [+ ...]] [destino [/A | /B]]
+
+  origen       Especifica el archivo o archivos que deben copiarse.
+  /A           Indica un archivo de texto ASCII.
+  /B           Indica un archivo binario.
+  /D           Permite que el archivo de destino se cree sin cifrar.
+  destino      Especifica el directorio y/o el nombre de archivo de los
+               nuevos archivos.
+  /V           Comprueba si los nuevos archivos están escritos
+               correctamente.
+  /N           Si está disponible, usa un nombre de archivo corto al copiar
+               un archivo cuyo nombre no tiene el formato 8.3.
+  /Y           Suprime la solicitud de confirmación antes de
+               sobrescribir un archivo de destino existente.
+  /-Y          Solicita confirmación antes de sobrescribir un archivo de
+               destino existente.
+  /Z           Copia archivos de red en modo reiniciable.
+  /L           Si el origen es un vínculo simbólico, copia el vínculo al
+               destino en lugar del archivo real al que apunta el vínculo.
+
+El modificador /Y puede preestablecerse en la variable de entorno COPYCMD.
+Esto puede anularse con el modificador /-Y en la línea de comando.
+La confirmación del usuario se solicita de forma predeterminada antes de
+sobrescribir algo, excepto si el comando COPY se ejecuta desde un script por
+lotes.
+
+Para anexar archivos, especifique un £nico archivo de destino pero
+varios archivos de origen (con caracteres comodines o el formato
+archivo1+archivo2+archivo3).
+```
+
+**TYPE**
+
+```
+Muestra el contenido de uno o más archivos de texto.
+
+TYPE [unidad:][ruta]archivo
+```
+
+**FSUTIL**  _`comando avanzado`_
+
+```
+---- Comandos compatibles ----
+
+8dot3name       Administración de 8dot3name
+behavior        Controla el comportamiento del sistema de archivos
+dax             Administración de volumen DAX
+dirty           Administra el bit de integridad del volumen
+file            Comandos específicos de archivos
+fsInfo          Información del sistema de archivos
+hardlink        Administración de vínculos físicos
+objectID        Administración de id. de objeto
+quota           Administración de cuota
+repair          Administración de recuperación autom tica
+reparsePoint    Administración de punto de repetición de an lisis
+storageReserve         Administración de reserva de almacenamiento
+resource        Administración del administrador de recursos transaccionales
+sparse          Control de archivo disperso
+tiering         Administración de propiedades de organización en niveles de almacenamiento
+transaction     Administración de transacciones
+usn             Administración de USN
+volume          Administración de vol£menes
+wim             Administración transparente del hospedaje de WIM
+```
+
+**MOVE**
+
+```
+Mueve archivos y cambia el nombre a archivos y directorios.
+
+Mover uno o más archivos:
+MOVE [/Y | /-Y] [unidad:][ruta]nombrearchivo1[,...] destino
+
+Cambiar el nombre a un directorio:
+MOVE [/Y | /-Y] [unidad:][ruta]nombredirectorio1 nombredirectorio2
+
+  [unidad:][ruta]nombrearchivo1 Especifica la ubicación y el nombre del
+archivo o archivos que quiere mover.
+                          
+  destino            Especifica la nueva ubicación del archivo. El
+                     destino puede constar de una letra de unidad y
+                     dos puntos, un nombre de directorio o una
+                     combinación. Si mueve solo un archivo, también
+                     puede incluir un nombre de archivo si quiere
+                     cambiar el nombre del archivo cuando lo mueva.
+
+  [unidad:][ruta]nombredirectorio1  Especifica el directorio al que
+                     desea cambiar el nombre.
+
+  nombredirectorio2  Especifica el nuevo nombre del directorio.
+
+  /Y                 Suprime la solicitud de confirmar si quiere
+                     sobrescribir un archivo de destino ya existente.
+
+  /-Y                Aparecer  la solicitud para confirmar si desea 
+                     sobrescribir un archivo de destino ya existente.
+
+El modificador /Y puede estar presente en la variable de entorno COPYCMD.
+Esto puede sobrescribirse con /-Y en la línea de comandos. Lo
+predeterminado es pedir la sobrescritura a no ser que el comando MOVE sea
+ejecutado dentro de un script de un archivo de proceso por 
+lotes.
+```
+
+**REN - RENAME**
+
+```
+Cambia el nombre de uno o más archivos.
+
+RENAME [unidad:][ruta]archivo1 archivo2.
+REN [unidad:][ruta]archivo1 archivo2.
+
+No puede especificar una nueva unidad o ruta para el archivo de destino.
+```
+
+**DEL**
+
+```
+Elimina uno o más archivos.
+
+DEL [/P] [/F] [/S] [/Q] [/A[[:]attributes]] names
+ERASE [/P] [/F] [/S] [/Q] [/A[[:]attributes]] names
+
+  names         Especifica una lista de uno o más archivos o directorios.
+                Se pueden usar caracteres comodín para eliminar varios archivos. Si se
+                especifica un directorio, todos los archivos de este se
+                eliminar n.
+
+  /P            Pide confirmación antes de eliminar cada archivo.
+  /F            Fuerza la eliminación de los archivos de solo lectura.
+  /S            Elimina los archivos especificados de todos los subdirectorios.
+  /Q            Modo silencioso. No pide confirmación sobre si es correcto eliminar el carácter comodín global
+  /A            Selecciona los archivos que se van a eliminar basándose en los atributos.
+  Atributos     R  Archivos de solo lectura            S  Archivos de sistema
+                H  Archivos ocultos               A  Archivos preparados para el archivado
+                I  Archivos indizados que no son de contenido  L  Puntos de reanálisis
+                O  Archivos sin conexión              -  Prefijo de exclusión
+
+Si las extensiones de comando est n habilitadas, DEL y ERASE cambian
+de la siguiente manera:
+
+La semántica que se muestra para el modificador /S está invertida
+de tal modo que le muestra solamente los archivos eliminados y no
+los que no se encontraron.
+```
+
+---
+
 </details><details> <summary>5. Árbol de directorios</summary>
 <h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/5.%20%C3%81rbol%20de%20directorios.md">Árbol de directorios</a> </h3>
   
