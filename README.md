@@ -1552,7 +1552,7 @@ Tecla de función o combinación | Descripción
 En la consola, presionar: `ALT + ENTER`
 
 </details><details> <summary>12. Manipulación de fecha y hora</summary>
-<h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/12.%20Teclas%20de%20funciones.md">Teclas de funciones</a> </h3>
+<h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/12.%20Manipulaci%C3%B3n%20de%20fecha%20y%20hora.md">Manipulación de fecha y hora</a> </h3>
   
 ![Image of Yaktocat](https://i.ibb.co/j6t9YG2/Administraci-n-de-Windows-desde-la-Consola-3.png)
 
