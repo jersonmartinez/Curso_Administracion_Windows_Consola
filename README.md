@@ -1551,6 +1551,152 @@ Tecla de función o combinación | Descripción
 
 En la consola, presionar: `ALT + ENTER`
 
+</details><details> <summary>12. Manipulación de fecha y hora</summary>
+<h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/12.%20Teclas%20de%20funciones.md">Teclas de funciones</a> </h3>
+  
+![Image of Yaktocat](https://i.ibb.co/j6t9YG2/Administraci-n-de-Windows-desde-la-Consola-3.png)
+
+Hoy estamos dando un salto en el tiempo. 
+
+En esta sesión, no aprenderás a solo cambiar la fecha y la hora, el curso de Administración de Windows desde la Consola es mucho más que eso.
+
+Llevar a cabo la configuración de fecha y hora en el sistema es relativamente sencilla desde el entorno gráfico. Sin embargo, esa sencilléz no se aleja mucho en poder hacerlo desde la `CLI` (`Command Line Interface`).
+
+En esta entrega, te mostraré dos comandos esenciales para llevar a cabo tal acción, estos son: `DATE` y `TIME`.
+
+Comando | Descripción
+------------ | -------------
+✔ DATE | Muestra o establece la fecha.
+✔ TIME | Muestra o establece la hora del sistema.
+
+Haciendo un **`DATE`** `/?` o `HELP` **`TIME`** para obtener información oficial y actualizada del sistema.
+
+
+**DATE**
+
+```
+Muestra o establece la fecha.
+
+DATE  [/T | fecha]
+
+Escriba DATE sin parámetros para mostrar la fecha actual y poder 
+especificar una nueva. Presione Entrar para mantener la misma fecha.
+
+Si están habilitadas las extensiones de comandos, el comando DATE admite
+el parámetro /T, que indica al comando mostrar tan solo la fecha actual
+sin pedir una nueva fecha.
+```
+
+**TIME**
+
+```
+Muestra o establece la hora del sistema.
+
+TIME  [/T | hora]
+
+Escriba TIME sin parámetros para mostrar la hora actual y poder
+especificar una nueva hora. Presione Entrar si no desea cambiar la hora.
+
+Si están habilitadas las extensiones de comandos el comando TIME admite
+el parámetro /T que indica al comando mostrar tan solo la
+hora actual, sin pedir una nueva hora.
+```
+
+---
+
+**`EJEMPLOS`**
+
+Obtener la fecha y hora
+
+```batch
+DATE /T
+TIME /T
+```
+
+Obtener la fecha y hora desde variables de entorno
+
+```batch
+ECHO %DATE%
+ECHO %TIME%
+
+echo La fecha es: %date% y la hora es: %time%
+```
+
+**Para cambiar hora y fecha** es tan sencillo con tan solo invocar el comando:
+ `DATE` y `TIME`
+
+**Subir de privilegios de Administrador en la misma consola limitada**
+
+```batch
+runas /profile /env /user:Antonio\Administrador cmd
+
+Escriba la contraseña para Antonio\Administrador:
+Intentando iniciar cmd como usuario "Antonio\Administrador" ...
+
+:: Para realizar correctamente esta acción, se deberá habilitar 
+:: el usuario Administrador del sistema y agregarle una clave.
+
+:: Esto corresponde a un capítulo superior sobre el aumento de privilegios.
+```
+
+Resincronización del tiempo
+
+```batch
+:: Iniciamos el servicio de Windows sobre la configuración del tiempo.
+net start w32time
+
+:: Se verifica el estado
+w32tm /query /peers
+
+:: Realizando resincronización del tiempo en el sistema local.
+:: El protocolo que se está usando es NTP o Network Time Protocol
+w32tm /resync /nowait
+```
+
+Crear un archivo con el mismo nombre del usuario del sistema
+
+```batch
+echo > %username%.txt
+```
+
+Crear un archivo con el mismo nombre de la fecha actual del sistema
+
+```batch
+echo > %date%.txt
+:: Esto no es funcional (Ya que el formato de fecha es: 00/00/00). 
+:: No se pueden crear archivos con plecas. Así que hay que escaparlas.
+
+type con >> new_file_%date:/=_%.txt
+```
+
+Script Batch para ver la hora de forma dinámica
+
+```batch
+TYPE CON > getCurrentTime.bat
+```
+
+Script: `getCurrentTime.bat`
+```batch
+@echo off
+	title Get Current Time
+
+		:getCurrentTime
+
+			echo The curent time is: %time:~0,8%
+			timeout 1 > NUL
+			cls
+
+		goto :getCurrentTime
+
+	pause>nul
+exit
+```
+
+Ejecutar el script
+
+```batch
+.\getCurrentTime.bat
+```
 
 </details>
   
