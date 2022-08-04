@@ -1699,7 +1699,49 @@ Ejecutar el script
 ```
 
 </details>
+
+</details><details> <summary>13. Uso de tuberías | PIPES</summary>
+<h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/12.%20Manipulaci%C3%B3n%20de%20fecha%20y%20hora.md">Manipulación de fecha y hora</a> </h3>
   
+[![#12. Manipulación de Fecha y Hora - Administración de Windows desde la Consola](https://img.youtube.com/vi/QxZ1Q35G-tI/maxresdefault.jpg)](https://youtu.be/QxZ1Q35G-tI "#12. Manipulación de Fecha y Hora - Administración de Windows desde la Consola")
+
+#### Pipes
+
+Una tubería del shell es una forma de conectar la salida de un programa a la entrada de otro sin ningún archivo temporal.
+
+```bash
+echo "Curso de administración de Windows desde la Consola" | find "Windows"
+```
+
+```bash
+type con > names.txt
+Fernando
+Ivania
+Martha
+Alberto
+Jerson
+```
+
+```bash
+~> type test.txt | sort
+type test.txt | sort | sort /R
+```
+
+```bash
+dir C:\Users\Root\Downloads\*.jpg
+dir C:\Users\Root\Downloads | find ".jpg"
+```
+
+```bash
+dir c:\ /s /b | find "TXT" | more
+```
+
+```bash
+tasklist | find "notepad"
+```
+
+</details>
+
 ---
 
 REPOSITORIO GITHUB SOBRE <a href="https://github.com/jersonmartinez/ShellScriptBatch" target="_blank">SHELL SCRIPT BATCH</a>
