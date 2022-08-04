@@ -1805,6 +1805,70 @@ More? ) >> script.bat
 
 </details>
 
+
+</details><details> <summary>15. Variables</summary>
+<h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/14.%20Redireccionamiento%20y%20desv%C3%ADo%20de%20comandos.md">Variables</a> </h3>
+  
+[![#15. Variables](https://img.youtube.com/vi/mjiWkQbymFM/maxresdefault.jpg)](https://youtu.be/mjiWkQbymFM "#14. Variables")
+
+#### Variables
+
+Es la capacidad de cambiar de dirección de una salida o incluso, parametrizar para que direccione una entrada.
+
+```batch
+echo "Curso de AWC - Redireccionamiento" > document.txt
+```
+
+```batch
+tasklist > tasks.txt
+tasklist | find "firefox" > tasks.txt
+```
+
+```batch
+type con > nombres.txt
+
+Antonio
+Patricia
+Julia
+Maria
+Ernesto
+```
+
+```batch
+sort < nombres.txt
+sort < nombres.txt > NombresOrdenados.txt
+```
+
+```batch
+echo "Una segunda línea para el documento" >> document.txt
+echo "Una tercera línea para el documento" >> document.txt
+echo "Reemplazando el contenido del documento" > document.txt
+```
+
+| Opción de redirección | Acción |
+|----------|:-------------:|
+| < archivo | Lee la entrada estándar del archivo. |
+| > archivo | Escribe la salida estándar en el archivo. |
+| >> file | Anexa la salida estándar al archivo. |
+| 1> archivo | Escribe la salida estándar en el archivo. |
+| 1>> archivo | Anexa la salida estándar al archivo. |
+| 2> archivo | Escribe un error estándar en el archivo. |
+| 2>> archivo | Anexa el error estándar al archivo. |
+| 2>&1 | Dirige el error estándar a través del mismo flujo que la salida estándar. Ambos pueden ser redirigidos a un archivo o canalizados a otro programa. |
+				
+
+```batch
+C:\Users\Root\Desktop>(
+More? echo @echo off 2>null
+More? echo title Saludos 2>null
+More? echo color 0E 2>null
+More? echo echo Hola! 2>null
+More? echo echo pause 2>null
+More? ) >> script.bat
+```
+
+</details>
+
 ---
 
 REPOSITORIO GITHUB SOBRE <a href="https://github.com/jersonmartinez/ShellScriptBatch" target="_blank">SHELL SCRIPT BATCH</a>
