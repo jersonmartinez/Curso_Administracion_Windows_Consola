@@ -1709,11 +1709,11 @@ Ejecutar el script
 
 Una tubería del shell es una forma de conectar la salida de un programa a la entrada de otro sin ningún archivo temporal.
 
-```bash
+```batch
 echo "Curso de administración de Windows desde la Consola" | find "Windows"
 ```
 
-```bash
+```batch
 type con > names.txt
 Fernando
 Ivania
@@ -1722,22 +1722,85 @@ Alberto
 Jerson
 ```
 
-```bash
+```batch
 ~> type test.txt | sort
 type test.txt | sort | sort /R
 ```
 
-```bash
+```batch
 dir C:\Users\Root\Downloads\*.jpg
 dir C:\Users\Root\Downloads | find ".jpg"
 ```
 
-```bash
+```batch
 dir c:\ /s /b | find "TXT" | more
 ```
 
-```bash
+```batch
 tasklist | find "notepad"
+```
+
+</details>
+
+</details><details> <summary>14. Redireccionamiento y desvío de comandos</summary>
+<h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/14.%20Redireccionamiento%20y%20desv%C3%ADo%20de%20comandos.md">Redireccionamiento y desvío de comandos</a> </h3>
+  
+[![#14. Redireccionamiento y desvío de comandos](https://img.youtube.com/vi/mjiWkQbymFM/maxresdefault.jpg)](https://youtu.be/mjiWkQbymFM "#14. Redireccionamiento y desvío de comandos")
+
+#### Pipes
+
+Es la capacidad de cambiar de dirección de una salida o incluso, parametrizar para que direccione una entrada.
+
+```batch
+echo "Curso de AWC - Redireccionamiento" > document.txt
+```
+
+```batch
+tasklist > tasks.txt
+tasklist | find "firefox" > tasks.txt
+```
+
+```batch
+type con > nombres.txt
+
+Antonio
+Patricia
+Julia
+Maria
+Ernesto
+```
+
+```batch
+sort < nombres.txt
+sort < nombres.txt > NombresOrdenados.txt
+```
+
+```batch
+echo "Una segunda línea para el documento" >> document.txt
+echo "Una tercera línea para el documento" >> document.txt
+echo "Reemplazando el contenido del documento" > document.txt
+```
+
+| Opción de redirección   |      Acción      |
+|----------|:-------------:|
+| < archivo |  Lee la entrada estándar del archivo. |
+| > archivo |  Escribe la salida estándar en el archivo.   |
+| >> file | Anexa la salida estándar al archivo. |
+| 1> archivo | Escribe la salida estándar en el archivo. |
+| 1>> archivo | Anexa la salida estándar al archivo. |
+| 2> archivo | Escribe un error estándar en el archivo. |
+| 2>> archivo | Anexa el error estándar al archivo. |
+| 2>&1 | Dirige el error estándar a través del mismo flujo que la salida estándar. Ambos pueden ser redirigidos a un archivo o canalizados a otro programa. |
+				
+
+```batch
+C:\Users\Root\Desktop>(
+More? echo @echo off 2>null
+More? echo title Saludos 2>null
+More? echo color 0E 2>null
+More? echo echo Hola! 2>null
+More? echo echo pause 2>null
+More? ) >> script.bat
 ```
 
 </details>
