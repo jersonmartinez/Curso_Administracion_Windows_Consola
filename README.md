@@ -1747,7 +1747,7 @@ tasklist | find "notepad"
   
 [![#14. Redireccionamiento y desvío de comandos](https://img.youtube.com/vi/mjiWkQbymFM/maxresdefault.jpg)](https://youtu.be/mjiWkQbymFM "#14. Redireccionamiento y desvío de comandos")
 
-#### Pipes
+#### Redireccionamiento y desvío de comandos
 
 Es la capacidad de cambiar de dirección de una salida o incluso, parametrizar para que direccione una entrada.
 
@@ -1783,23 +1783,23 @@ echo "Reemplazando el contenido del documento" > document.txt
 
 | Opción de redirección | Acción |
 |----------|:-------------:|
-| < archivo | Lee la entrada estándar del archivo. |
-| > archivo | Escribe la salida estándar en el archivo. |
-| >> file | Anexa la salida estándar al archivo. |
-| 1> archivo | Escribe la salida estándar en el archivo. |
-| 1>> archivo | Anexa la salida estándar al archivo. |
-| 2> archivo | Escribe un error estándar en el archivo. |
-| 2>> archivo | Anexa el error estándar al archivo. |
-| 2>&1 | Dirige el error estándar a través del mismo flujo que la salida estándar. Ambos pueden ser redirigidos a un archivo o canalizados a otro programa. |
+| `<` archivo | Lee la entrada estándar del archivo. |
+| `>` archivo | Escribe la salida estándar en el archivo. |
+| `>>` archivo | Anexa la salida estándar al archivo. |
+| `1>` archivo | Escribe la salida estándar en el archivo. |
+| `1>>` archivo | Anexa la salida estándar al archivo. |
+| `2>` archivo | Escribe un error estándar en el archivo. |
+| `2>>` archivo | Anexa el error estándar al archivo. |
+| `2>&1` | Dirige el error estándar a través del mismo flujo que la salida estándar. Ambos pueden ser redirigidos a un archivo o canalizados a otro programa. |
 				
 
 ```batch
-C:\Users\Root\Desktop>(
-More? echo @echo off 2>null
-More? echo title Saludos 2>null
-More? echo color 0E 2>null
-More? echo echo Hola! 2>null
-More? echo echo pause 2>null
+(
+More? echo @echo off
+More? echo title Saludos
+More? echo color 0E
+More? echo echo Hola!
+More? echo echo pause
 More? ) >> script.bat
 ```
 
