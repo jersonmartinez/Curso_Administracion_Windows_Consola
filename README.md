@@ -1701,7 +1701,7 @@ Ejecutar el script
 </details>
 
 </details><details> <summary>13. Uso de tuberías | PIPES</summary>
-<h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/12.%20Manipulaci%C3%B3n%20de%20fecha%20y%20hora.md">Uso de tuberías | PIPES</a> </h3>
+<h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/13.%20Uso%20de%20tuber%C3%ADas%20o%20PIPES.md">Uso de tuberías | PIPES</a> </h3>
   
 [![#13. Uso de Tuberías | PIPES - Administración de Windows desde la Consola](https://img.youtube.com/vi/mjiWkQbymFM/maxresdefault.jpg)](https://youtu.be/mjiWkQbymFM "#13. Uso de Tuberías | PIPES - Administración de Windows desde la Consola")
 
