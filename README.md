@@ -1786,6 +1786,7 @@ echo "Reemplazando el contenido del documento" > document.txt
 | `<` archivo | Lee la entrada estándar del archivo. |
 | `>` archivo | Escribe la salida estándar en el archivo. |
 | `>>` archivo | Anexa la salida estándar al archivo. |
+| `>nul` | Anula la salida. |
 | `1>` archivo | Escribe la salida estándar en el archivo. |
 | `1>>` archivo | Anexa la salida estándar al archivo. |
 | `2>` archivo | Escribe un error estándar en el archivo. |
