@@ -1808,64 +1808,128 @@ More? ) >> script.bat
 
 
 </details><details> <summary>15. Variables</summary>
-<h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/14.%20Redireccionamiento%20y%20desv%C3%ADo%20de%20comandos.md">Variables</a> </h3>
+<h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/13.%20Uso%20de%20tuber%C3%ADas%20o%20PIPES.md">Variables</a> </h3>
   
-[![#15. Variables](https://img.youtube.com/vi/mjiWkQbymFM/maxresdefault.jpg)](https://youtu.be/mjiWkQbymFM "#14. Variables")
+[![#15. Variables](https://img.youtube.com/vi/mjiWkQbymFM/maxresdefault.jpg)](https://youtu.be/mjiWkQbymFM "#15. Variables")
 
 #### Variables
 
-Es la capacidad de cambiar de dirección de una salida o incluso, parametrizar para que direccione una entrada.
+Una variable es una entidad abstracta, que puede referirse a una cualidad, propiedad o característica.
+
+Las variables tienen asociado un valor, un dato que puede ser invocado mediante esta variable.
+Además, las variables son variables, precisamente porque su valor puede cambiar.
+
+Veamos algunos ejemplos de variables: 
 
 ```batch
-echo "Curso de AWC - Redireccionamiento" > document.txt
+SET
+SET /?
 ```
 
+Permite hacer filtros con sus iniciales: 
 ```batch
-tasklist > tasks.txt
-tasklist | find "firefox" > tasks.txt
+SET p
+SET c
+SET userdomain
 ```
 
-```batch
-type con > nombres.txt
+Almacenar y desplazarse a una ruta específica
 
-Antonio
-Patricia
-Julia
-Maria
-Ernesto
+```batch
+SET ruta=C:\Users\Root\Desktop
+cd %ruta%
+
+SET "ruta=C:\Users\Root\Desktop"
+cd %ruta%
 ```
 
+La variable SET tiene dos parámetros `/A` y `/P`.
+
 ```batch
-sort < nombres.txt
-sort < nombres.txt > NombresOrdenados.txt
+SET /A expression
+SET /P variable=[promptString]
 ```
 
+`SET /A`
+Se establece en una expresión numérica que se evalúa.
+
+Realizando operaciones aritméticas: 
+
 ```batch
-echo "Una segunda línea para el documento" >> document.txt
-echo "Una tercera línea para el documento" >> document.txt
-echo "Reemplazando el contenido del documento" > document.txt
+SET /A 2+4
+
+SET /A "2+4"
+
+SET /A "suma=2+4"
+echo %suma%
+
+SET /A "adición=2+4" >nul
+echo %adición%
+
+SET /A "sustracción=2-4" >nul
+echo %sustracción%
+
+SET /A "multiplicacón=2*4" >nul
+echo %multiplicacón%
+
+SET /A "división=2/4" >nul
+echo %división%
+```
+Asignar el mismo valor a múltiples variables: 
+
+```batch
+SET /A "_var1=_var2=_var3=10"
 ```
 
-| Opción de redirección | Acción |
-|----------|:-------------:|
-| < archivo | Lee la entrada estándar del archivo. |
-| > archivo | Escribe la salida estándar en el archivo. |
-| >> file | Anexa la salida estándar al archivo. |
-| 1> archivo | Escribe la salida estándar en el archivo. |
-| 1>> archivo | Anexa la salida estándar al archivo. |
-| 2> archivo | Escribe un error estándar en el archivo. |
-| 2>> archivo | Anexa el error estándar al archivo. |
-| 2>&1 | Dirige el error estándar a través del mismo flujo que la salida estándar. Ambos pueden ser redirigidos a un archivo o canalizados a otro programa. |
-				
+`SET /P`
+Establece el valor desde en una línea de entrada introducida por el usuario.
 
 ```batch
-C:\Users\Root\Desktop>(
-More? echo @echo off 2>null
-More? echo title Saludos 2>null
-More? echo color 0E 2>null
-More? echo echo Hola! 2>null
-More? echo echo pause 2>null
-More? ) >> script.bat
+SET /P "Nombre=Dime tu nombre: "
+echo El nombre ingresado es: %Nombre%
+```
+
+Realizar un Input desde un ejecutable en Batch.
+
+```batch
+type con > input.bat
+@echo off
+SET /P Nombre=Dime tu nombre:
+echo Tu nombre es: %Nombre%
+
+:: RESULTADO
+:: Dime tu nombre: Jerson Antonio
+:: Tu nombre es: Jerson Antonio
+```
+
+Crear una calculadora sencilla, solo aritmética.
+
+```batch
+type con > calculadora.bat
+@echo off
+echo Bienvenido a la aritmeticalculadora.
+SET /P PrimerValor=Ingresa el primer valor:
+SET /P SegundoValor=Ingresa el segundo valor:
+SET /A "adición=%PrimerValor%+%SegundoValor%"
+SET /A "sustracción=%PrimerValor%-%SegundoValor%"
+SET /A "multiplicación=%PrimerValor%*%SegundoValor%"
+SET /A "división=%PrimerValor%/%SegundoValor%"
+echo Suma: %adición%
+echo Resta: %sustracción%
+echo Multiplicación: %multiplicación%
+echo División: %división%
+
+::###################################
+::Resultado: 
+
+> calculadora.bat
+Bienvenido a la aritmeticalculadora.
+Ingresa el primer valor:10
+Ingresa el segundo valor:5
+Suma: 15
+Resta: 5
+Multiplicación: 50
+División: 2
 ```
 
 </details>
