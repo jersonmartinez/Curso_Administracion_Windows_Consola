@@ -1869,8 +1869,8 @@ echo %adición%
 SET /A "sustracción=2-4" >nul
 echo %sustracción%
 
-SET /A "multiplicacón=2*4" >nul
-echo %multiplicacón%
+SET /A "multiplicación=2*4" >nul
+echo %multiplicación%
 
 SET /A "división=2/4" >nul
 echo %división%
