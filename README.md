@@ -1934,6 +1934,164 @@ División: 2
 
 </details>
 
+</details><details> <summary>15. Variables</summary>
+<h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/13.%20Uso%20de%20tuber%C3%ADas%20o%20PIPES.md">Variables de entorno</a> </h3>
+  
+[![#15. Variables de entorno](https://img.youtube.com/vi/mjiWkQbymFM/maxresdefault.jpg)](https://youtu.be/mjiWkQbymFM "#15. Variables de entorno")
+
+## Variables de entorno
+
+**¿Qué son variables de entorno?**
+
+Es una variable que puede ser manipulada a nivel global, incluso, desde diferentes procesos. 
+
+**¿Qué es un entorno?**
+
+Es un espacio determinado donde cohabitan diferentes recursos. En específico, las varibles de entorno en Windows, son aquellas que están definidas a nivel de máquina, pudiendo ser accedidas desde cualquier proceso que en esta se ejecute.
+
+**¿Cuál es la principal diferencia entre variables de entorno y solo variables?**
+
+- La condición.
+  - Las variables que se definen dentro de un proceso, según su declaración, pueden ser solamente accedidas por dicho proceso. En el caso de las variables de entorno, no tiene límites de acceso.
+
+Vamos directo con algunos ejemplos: 
+
+### Obtener todas las variables definidas.
+
+```batch
+SET
+
+:: Variables dinámicas
+
+echo %CD%
+echo %RANDOM%
+
+echo %DATE%
+echo %TIME%
+
+echo %DATE% - %TIME%
+
+SET OneDriveConsumer
+
+SET Jerson=%OneDriveConsumer%
+CD Jerson
+
+EXIT
+
+:: Si se vuelve a acceder, estas variables dejan de existir.
+```
+
+### Acceder en distintos directorios mediante las variables de entorno
+
+```batch
+:: CTRL + R
+
+%ALLUSERSPROFILE%
+
+:: Haciendo llamadas a la interfaz gráfica desde la terminal.
+
+start %HOMEDRIVE%
+explorer %HOMEDRIVE%
+```
+
+### Las variables de entorno se guardan en: 
+
+```batch
+:: Primera forma de ver su contenido.
+SET %PATH%
+
+:: Segunda forma de ver su contenido.
+path
+```
+
+### Creando un comando y la forma en que funciona con sus variables de entorno
+
+```batch
+:: Creando un nuevo fichero .bat en C:\Windows\System32
+
+type con >> helloworld.bat
+@echo off
+echo Hello World!
+
+:: Desde otra terminal, llamar el comando: helloworld
+helloworld
+Hello World!
+```
+
+```batch
+:: Llegar al directorio documents
+
+explorer shell::: BB06C0E4-D293-4f75-8A90-CB05B6477EEE}
+explorer \\
+
+:: Con un solo slash, llega a disco local C:
+explorer \
+```
+
+### Creación de variables de entorno
+
+```batch
+:: SETX
+:: 
+:: Crea o modifica variables de entorno para usuario o sistema
+:: environment. Can set variables based on arguments, regkeys or
+:: file input
+
+:: Lo guardamos a nivel de usuario
+SETX CursoAWC "Curso de Administración de Windows desde la Consola"
+
+:: Lo guardamos a nivel de sistema
+SETX CursoAWC "Curso de Administración de Windows desde la Consola" /M
+
+:: Lo guardamos a nivel de usuario
+SETX MYPATH "%PATH%"
+
+WARNING: The data being saved is truncated to 1024 characters.
+
+SUCCESS: Specified value was saved.
+
+:: Lo guardamos a nivel de sistema
+SETX MYPATH "%PATH%" /M
+
+WARNING: The data being saved is truncated to 1024 characters.
+
+SUCCESS: Specified value was saved.
+
+:: Comprobar esto en una nueva sesión de consola o desde interfaz gráfica.
+```
+
+### Eliminación de variables de entorno
+
+```batch
+:: ELIMINACIÓN TEMPORAL
+SET MYPATH=
+
+:: ELIMINACIÓN PERSISTENTE (Ejecutar siempre como Administrador).
+
+:: Se elimina a nivel de usuario
+REG delete "HKCU\Environment" /v MYPATH /f
+The operation completed successfully.
+
+REG delete "HKCU\Environment" /v CursoAWC /f
+The operation completed successfully.
+
+
+:: Se elimina a nivel de sistema
+REG delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /F /V MYPATH
+The operation completed successfully.
+
+REG delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /F /V CursoAWC
+The operation completed successfully.
+
+:: Comprobar esto desde interfaz gráfica.
+```
+
+### Conclusión
+
+Con esto, has podido aprender qué son las variables de entorno y las diferencias con las variables típicas, además de las variables de entorno de usuario y del sistema. A gestionar dichas variables de entorno, desde su visualización, creación, modificación y eliminación.
+
+</details>
+
 ---
 
 REPOSITORIO GITHUB SOBRE <a href="https://github.com/jersonmartinez/ShellScriptBatch" target="_blank">SHELL SCRIPT BATCH</a>
