@@ -1934,7 +1934,7 @@ División: 2
 
 </details>
 
-</details><details> <summary>15. Variables</summary>
+</details><details> <summary>15. Variables de entorno</summary>
 <h3 align="center"> :clipboard: <a href="https://github.com/jersonmartinez/Curso_Administracion_Windows_Consola/blob/master/13.%20Uso%20de%20tuber%C3%ADas%20o%20PIPES.md">Variables de entorno</a> </h3>
   
 [![#15. Variables de entorno](https://img.youtube.com/vi/mjiWkQbymFM/maxresdefault.jpg)](https://youtu.be/mjiWkQbymFM "#15. Variables de entorno")
