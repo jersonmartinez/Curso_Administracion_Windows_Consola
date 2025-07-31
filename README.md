@@ -318,6 +318,330 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 
 </details>
 
+### 📦 Gestión de Archivos Comprimidos
+
+<details>
+<summary>22. Compresión de archivos y directorios</summary>
+
+📖 [Ver capítulo](22.%20Compresión%20de%20archivos%20y%20directorios.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Técnicas de compresión nativa de Windows y creación de archivos ZIP.
+
+**Comandos:** COMPACT, PowerShell Compress-Archive, optimización de espacio.
+
+**Ejemplos prácticos:** Scripts de backup comprimido y optimización de almacenamiento.
+
+</details>
+
+<details>
+<summary>23. Expandir archivos comprimidos</summary>
+
+📖 [Ver capítulo](23.%20Expandir%20archivos%20comprimidos.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Extracción de archivos comprimidos y restauración de backups.
+
+**Comandos:** PowerShell Expand-Archive, COMPACT /U, TAR, verificación de integridad.
+
+**Ejemplos prácticos:** Restauración automática de backups y despliegue de software.
+
+</details>
+
+### 🔗 Integración y Automatización
+
+<details>
+<summary>24. Llamadas a programas externos</summary>
+
+📖 [Ver capítulo](24.%20Llamadas%20a%20programas%20externos.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Integración de herramientas de terceros y creación de sistemas híbridos.
+
+**Comandos:** START, CALL, PowerShell Invoke-Expression, manejo de errores.
+
+**Ejemplos prácticos:** Automatización de instalación de software y integración con herramientas especializadas.
+
+</details>
+
+<details>
+<summary>25. Copiar información al portapapeles</summary>
+
+📖 [Ver capítulo](25.%20Copiar%20información%20al%20portapapeles.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Manipulación del portapapeles de Windows para transferencia de datos.
+
+**Comandos:** CLIP, PowerShell Set-Clipboard, transferencia entre aplicaciones.
+
+**Ejemplos prácticos:** Automatización de copia y pegado, transferencia de diagnósticos.
+
+</details>
+
+### 📊 Análisis y Organización
+
+<details>
+<summary>26. Ordenar datos</summary>
+
+📖 [Ver capítulo](26.%20Ordenar%20datos.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Técnicas de ordenamiento y organización de datos en Windows.
+
+**Comandos:** SORT, DIR con ordenamiento, filtrado avanzado.
+
+**Ejemplos prácticos:** Scripts de análisis de datos y generación de reportes ordenados.
+
+</details>
+
+### 🔗 Gestión de Archivos y Sistema
+
+<details>
+<summary>27. Asociar archivos con extensiones</summary>
+
+📖 [Ver capítulo](27.%20Asociar%20archivos%20con%20extensiones.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Configuración de asociaciones de archivos y gestión de tipos MIME.
+
+**Comandos:** ASSOC, FTYPE, REG, configuración de programas por defecto.
+
+**Ejemplos prácticos:** Personalización del entorno de trabajo y configuración de aplicaciones.
+
+</details>
+
+<details>
+<summary>28. Asignación de permisos</summary>
+
+📖 [Ver capítulo](28.%20Asignación%20de%20permisos.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Gestión avanzada de permisos y seguridad de archivos.
+
+**Comandos:** ICACLS, TAKEOWN, gestión de ACLs y herencia de permisos.
+
+**Ejemplos prácticos:** Configuración de seguridad corporativa y auditorías de permisos.
+
+</details>
+
+<details>
+<summary>29. Vínculos simbólicos</summary>
+
+📖 [Ver capítulo](29.%20Vínculos%20simbólicos.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Creación y gestión de enlaces simbólicos y puntos de unión.
+
+**Comandos:** MKLINK, enlaces duros, puntos de unión, gestión de referencias.
+
+**Ejemplos prácticos:** Organización inteligente de archivos y compatibilidad de aplicaciones.
+
+</details>
+
+<details>
+<summary>30. Información del sistema</summary>
+
+📖 [Ver capítulo](30.%20Información%20del%20sistema.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Diagnóstico completo y monitoreo del sistema Windows.
+
+**Comandos:** SYSTEMINFO, WMIC, TASKLIST, NETSTAT, POWERCFG.
+
+**Ejemplos prácticos:** Scripts de diagnóstico y monitoreo en tiempo real.
+
+</details>
+
+### 🔌 Gestión del Sistema
+
+<details>
+<summary>31. Apagar, Reiniciar y Cerrar sesión</summary>
+
+📖 [Ver capítulo](31.%20Apagar%2C%20Reiniciar%20y%20Cerrar%20sesión.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Control total del ciclo de vida del sistema Windows.
+
+**Comandos:** SHUTDOWN, LOGOFF, EXIT, gestión de apagado programado.
+
+**Ejemplos prácticos:** Scripts de mantenimiento y gestión masiva de sistemas.
+
+</details>
+
+<details>
+<summary>32. Gestión de usuarios</summary>
+
+📖 [Ver capítulo](32.%20Gestión%20de%20usuarios.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Creación, modificación y administración de cuentas de usuario.
+
+**Comandos:** NET USER, NET LOCALGROUP, WMIC USERACCOUNT, gestión de grupos.
+
+**Ejemplos prácticos:** Automatización de onboarding y gestión de permisos.
+
+</details>
+
+<details>
+<summary>33. Habilitar usuario Administrador</summary>
+
+📖 [Ver capítulo](33.%20Habilitar%20usuario%20Administrador.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Gestión segura de la cuenta de Administrador del sistema.
+
+**Comandos:** NET USER ADMINISTRATOR, WMIC USERACCOUNT, configuración de seguridad.
+
+**Ejemplos prácticos:** Recuperación de emergencia y gestión de cuentas críticas.
+
+</details>
+
+<details>
+<summary>34. Gestión de Procesos</summary>
+
+📖 [Ver capítulo](34.%20Gestión%20de%20Procesos.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Control y administración de procesos del sistema.
+
+**Comandos:** TASKLIST, TASKKILL, WMIC PROCESS, monitoreo de recursos.
+
+**Ejemplos prácticos:** Optimización de rendimiento y resolución de problemas críticos.
+
+</details>
+
+<details>
+<summary>35. Conexiones de red</summary>
+
+📖 [Ver capítulo](35.%20Conexiones%20de%20red.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Diagnóstico y gestión de conexiones de red del sistema.
+
+**Comandos:** NETSTAT, filtrado de conexiones, análisis de tráfico.
+
+**Ejemplos prácticos:** Detección de conexiones sospechosas y monitoreo de red.
+
+</details>
+
+<details>
+<summary>36. Obtener contraseñas guardadas</summary>
+
+📖 [Ver capítulo](36.%20Obtener%20contraseñas%20guardadas.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Recuperación y gestión de credenciales almacenadas en Windows.
+
+**Comandos:** CMDKEY, PowerShell Get-StoredCredential, REG QUERY, CERTUTIL.
+
+**Ejemplos prácticos:** Recuperación de emergencia y auditoría de credenciales.
+
+</details>
+
+<details>
+<summary>37. Crear red hospedada</summary>
+
+📖 [Ver capítulo](37.%20Crear%20red%20hospedada.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Configuración de puntos de acceso WiFi y redes virtuales en Windows.
+
+**Comandos:** NETS WLAN, configuración de SSID, gestión de clientes.
+
+**Ejemplos prácticos:** Creación de redes temporales para eventos y emergencias.
+
+</details>
+
+<details>
+<summary>38. Enviar mensajes a usuarios</summary>
+
+📖 [Ver capítulo](38.%20Enviar%20mensajes%20a%20usuarios.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Comunicación en red y envío de alertas a usuarios conectados.
+
+**Comandos:** MSG, NET SEND, PowerShell Send-Message, WMIC.
+
+**Ejemplos prácticos:** Sistemas de alertas automáticas y comunicación administrativa.
+
+</details>
+
+<details>
+<summary>39. Envío de señales</summary>
+
+📖 [Ver capítulo](39.%20Envío%20de%20señales.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Control avanzado de procesos mediante envío de señales del sistema.
+
+**Comandos:** TASKKILL, WMIC PROCESS, PowerShell Stop-Process, SIGNAL.EXE.
+
+**Ejemplos prácticos:** Gestión de recursos y control de aplicaciones problemáticas.
+
+</details>
+
+<details>
+<summary>40. Ejecutar como Administrador - RUNAS</summary>
+
+📖 [Ver capítulo](40.%20Ejecutar%20como%20Administrador%20-%20RUNAS.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Gestión segura de privilegios y elevación de permisos en Windows.
+
+**Comandos:** RUNAS, UAC, gestión de credenciales, contextos de usuario.
+
+**Ejemplos prácticos:** Automatización de tareas administrativas y gestión de seguridad.
+
+</details>
+
+### 🌐 Servicios de Red
+
+<details>
+<summary>41. Escritorio Remoto</summary>
+
+📖 [Ver capítulo](41.%20Escritorio%20Remoto.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Configuración y gestión de conexiones remotas con RDP en Windows.
+
+**Comandos:** MSTSC, QUSER, LOGOFF, QUERY SESSION, gestión de sesiones remotas.
+
+**Ejemplos prácticos:** Administración remota de servidores y gestión de conexiones múltiples.
+
+</details>
+
+<details>
+<summary>42. Programador de Tareas</summary>
+
+📖 [Ver capítulo](42.%20Programador%20de%20Tareas.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Automatización completa de tareas y procesos del sistema Windows.
+
+**Comandos:** SCHTASKS, creación de tareas programadas, triggers y condiciones.
+
+**Ejemplos prácticos:** Scripts de backup automático, limpieza y monitoreo programado.
+
+</details>
+
+<details>
+<summary>43. Gestión de un servidor FTP</summary>
+
+📖 [Ver capítulo](43.%20Gestión%20de%20un%20servidor%20FTP.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Configuración y administración de servidores FTP para transferencia de archivos.
+
+**Comandos:** NET START/STOP, IISRESET, SC, NETSH, gestión de servicios FTP.
+
+**Ejemplos prácticos:** Servidores de archivos corporativos y sistemas de backup remoto.
+
+</details>
+
+<details>
+<summary>44. Gestión de un servidor DHCP</summary>
+
+📖 [Ver capítulo](44.%20Gestión%20de%20un%20servidor%20DHCP.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Administración de servidores DHCP para asignación automática de direcciones IP.
+
+**Comandos:** NETSH DHCP, gestión de ámbitos, reservas y opciones DHCP.
+
+**Ejemplos prácticos:** Configuración de redes corporativas y gestión de dispositivos móviles.
+
+</details>
+
+<details>
+<summary>45. Gestión de un servidor DNS</summary>
+
+📖 [Ver capítulo](45.%20Gestión%20de%20un%20servidor%20DNS.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Configuración y administración de servidores DNS para resolución de nombres.
+
+**Comandos:** DNSCMD, NETSH DNS, gestión de zonas y registros DNS.
+
+**Ejemplos prácticos:** Infraestructura de red corporativa y servicios de dominio.
+
+</details>
+
 ## 🚀 ¿Por qué este curso?
 
 ### ✅ **Contenido 100% Práctico**
@@ -396,16 +720,37 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para
 
 ## 🎯 Roadmap del Curso
 
-### 🚧 Próximos Capítulos (En Desarrollo)
-- **22. Automatización con Task Scheduler**
-- **23. Gestión de servicios de Windows**
-- **24. Administración de usuarios y grupos**
-- **25. Monitoreo de rendimiento del sistema**
-- **26. Backup y recuperación avanzada**
-- **27. Networking desde la consola**
-- **28. Integración con PowerShell**
-- **29. Scripts de despliegue**
-- **30. Proyecto final integrador**
+### ✅ Curso en Expansión Continua
+¡El curso de **Administración de Windows desde la Consola** continúa expandiéndose con nuevos capítulos avanzados! 
+
+Hemos cubierto desde los conceptos más básicos hasta las técnicas más avanzadas de administración de sistemas Windows, incluyendo:
+
+- 🔰 **Fundamentos** (Capítulos 0-5): Comandos básicos y navegación
+- 🔄 **Operaciones Avanzadas** (Capítulos 6-9): Gestión avanzada de archivos
+- 🎛️ **Personalización** (Capítulos 10-12): Configuración del entorno
+- 🔗 **Redirección** (Capítulos 13-14): Flujo de datos y tuberías
+- 💾 **Variables** (Capítulos 15-16): Gestión de variables y entorno
+- 🛤️ **Configuración** (Capítulos 17-18): PATH y manejo de cadenas
+- 🔍 **Búsqueda** (Capítulos 19-21): Localización y análisis de archivos
+- 📦 **Compresión** (Capítulos 22-23): Gestión de archivos comprimidos
+- 🔗 **Integración** (Capítulos 24-25): Programas externos y portapapeles
+- 📊 **Análisis** (Capítulo 26): Ordenamiento de datos
+- 🔗 **Sistema** (Capítulos 27-30): Permisos, vínculos y diagnóstico
+- 🔌 **Gestión del Sistema** (Capítulos 31-36): Control de procesos, usuarios, red y credenciales
+- 🌐 **Redes y Comunicación** (Capítulos 37-38): Redes hospedadas y mensajería en red
+- ⚡ **Control Avanzado** (Capítulos 39-40): Señales de procesos y gestión de privilegios
+- 🌐 **Servicios de Red** (Capítulos 41-45): Escritorio remoto, programación de tareas, FTP, DHCP y DNS
+- 🛡️ **Seguridad y Cifrado** (Capítulos 46-48): Bitlocker, etiquetado de discos y unidades virtuales
+- 💾 **Gestión de Almacenamiento** (Capítulos 49-52): Liberación de espacio, optimización, verificación y formateo de discos
+- 🗂️ **Particionado y Volúmenes** (Capítulos 53-54): Creación de particiones y gestión de volúmenes dinámicos
+- 🔄 **Recuperación de Datos** (Capítulo 55): Técnicas avanzadas de recuperación y restauración de sistemas
+
+### 🚀 Próximos Pasos Recomendados
+- **PowerShell**: Profundiza en scripting avanzado con PowerShell
+- **Windows Server**: Aprende administración de servidores
+- **Automatización**: Explora herramientas como Ansible o Chef
+- **Monitoreo**: Implementa sistemas de monitoreo empresarial
+- **Seguridad**: Especialízate en ciberseguridad y hardening
 
 ---
 
