@@ -15,6 +15,10 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 - 📊 **Análisis y comparación** de archivos
 - 🛡️ **Auditorías de seguridad** desde la línea de comandos
 - ⚡ **Automatización** con scripts batch avanzados
+- 🛡️ **Seguridad y cifrado** con Bitlocker y políticas avanzadas
+- 💾 **Gestión de almacenamiento** y optimización de discos
+- 🌐 **Servicios de red** y administración de servidores
+- 🔧 **Herramientas avanzadas** como WMIC, CURL y gestión del registro
 
 ## 📚 Contenido del Curso
 
@@ -636,9 +640,145 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 
 **Descripción:** Configuración y administración de servidores DNS para resolución de nombres.
 
-**Comandos:** DNSCMD, NETSH DNS, gestión de zonas y registros DNS.
+**Comandos:** DNSCMD, NETSH DNS, IPCONFIG, NSLOOKUP, gestión de zonas y registros DNS.
 
 **Ejemplos prácticos:** Infraestructura de red corporativa y servicios de dominio.
+
+</details>
+
+### 🛡️ Seguridad y Cifrado
+
+<details>
+<summary>46. Bitlocker</summary>
+
+📖 [Ver capítulo](46.%20Bitlocker.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Configuración y gestión completa del cifrado de discos con Bitlocker.
+
+**Comandos:** MANAGE-BDE, BDEHCFG, REPQUERY-BITLOCKER, TPM, CERTUTIL.
+
+**Ejemplos prácticos:** Cifrado de unidades, gestión de claves de recuperación, auditorías de seguridad.
+
+</details>
+
+<details>
+<summary>47. Etiquetar discos</summary>
+
+📖 [Ver capítulo](47.%20Etiquetar%20discos.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Gestión avanzada de etiquetas de volúmenes y organización de almacenamiento.
+
+**Comandos:** LABEL, VOL, WMIC LOGICALDISK, PowerShell Set-Volume, DISKPART, FSUTIL.
+
+**Ejemplos prácticos:** Organización inteligente de discos, categorización de almacenamiento, auditorías de volúmenes.
+
+</details>
+
+<details>
+<summary>48. Unidad Virtual</summary>
+
+📖 [Ver capítulo](48.%20Unidad%20Virtual.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Creación y gestión de unidades virtuales y montaje de imágenes de disco.
+
+**Comandos:** DISKPART, MOUNTVOL, SUBST, PowerShell Mount-DiskImage, VHDTOOL, IMDISK.
+
+**Ejemplos prácticos:** Gestión de VHDs, montaje de ISOs, creación de RAM disks, virtualización de almacenamiento.
+
+</details>
+
+### 💾 Gestión de Almacenamiento
+
+<details>
+<summary>49. Liberar espacio en disco</summary>
+
+📖 [Ver capítulo](49.%20Liberar%20espacio%20en%20disco.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Técnicas avanzadas para liberar espacio en disco y optimizar el almacenamiento.
+
+**Comandos:** CLEANMGR, DEL, FORFILES, PowerShell, FSUTIL, WEVTUTIL.
+
+**Ejemplos prácticos:** Limpieza automática, gestión de archivos temporales, optimización de espacio.
+
+</details>
+
+<details>
+<summary>50. Optimizar y desfragmentar disco</summary>
+
+📖 [Ver capítulo](50.%20Optimizar%20y%20desfragmentar%20disco.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Optimización y mantenimiento avanzado de discos duros y SSDs.
+
+**Comandos:** DEFRAG, PowerShell Optimize-Volume, CHKDSK, WMIC, FSUTIL.
+
+**Ejemplos prácticos:** Optimización automática, análisis de fragmentación, mantenimiento programado.
+
+</details>
+
+### 🔧 Herramientas Avanzadas de Administración
+
+<details>
+<summary>66. Administración de Windows - WMIC</summary>
+
+📖 [Ver capítulo](66.%20Administración%20de%20Windows%20-%20WMIC.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Uso avanzado de Windows Management Instrumentation Command para administración del sistema.
+
+**Comandos:** WMIC (CPU, PROCESS, SERVICE, PRODUCT, OS, COMPUTERSYSTEM, BIOS, logicaldisk, memorychip), SCHTASKS.
+
+**Ejemplos prácticos:** Monitoreo de sistema, gestión de procesos, auditorías de hardware, automatización avanzada.
+
+</details>
+
+<details>
+<summary>67. Registros</summary>
+
+📖 [Ver capítulo](67.%20Registros.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Gestión completa del Registro de Windows desde la línea de comandos.
+
+**Comandos:** REG QUERY, REG ADD, REG DELETE, REG EXPORT, REG IMPORT.
+
+**Ejemplos prácticos:** Configuración de sistema, auditorías de registro, backup y restauración de configuraciones.
+
+</details>
+
+<details>
+<summary>68. CURL</summary>
+
+📖 [Ver capítulo](68.%20CURL.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Uso avanzado de CURL para transferencias HTTP, HTTPS, FTP y gestión de archivos remotos.
+
+**Comandos:** CURL (HTTP, HTTPS, FTP, SFTP, -O, -o, -H, -X, -d, -u, -T, -b, -L, -f, -c, -k, --cacert, --connect-timeout).
+
+**Ejemplos prácticos:** Descargas automáticas, transferencias seguras, APIs REST, monitoreo de servicios web.
+
+</details>
+
+<details>
+<summary>69. SHELL</summary>
+
+📖 [Ver capítulo](69.%20SHELL.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Gestión avanzada del shell de Windows y automatización del entorno de trabajo.
+
+**Comandos:** CMD, SET, ECHO, POWERSHELL, WHERE, WHOAMI, PROMPT, PATH.
+
+**Ejemplos prácticos:** Configuración de entornos, automatización de tareas, gestión de variables de entorno.
+
+</details>
+
+<details>
+<summary>70. Papelera de reciclaje</summary>
+
+📖 [Ver capítulo](70.%20Papelera%20de%20reciclaje.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Gestión avanzada de la papelera de reciclaje y recuperación de archivos eliminados.
+
+**Comandos:** RD, DEL, PowerShell Clear-RecycleBin, Get-ChildItem, FORFILES, XCOPY.
+
+**Ejemplos prácticos:** Limpieza automática, recuperación de archivos, auditorías de eliminación, gestión de políticas de retención.
 
 </details>
 
@@ -684,6 +824,10 @@ Al completar este curso serás capaz de:
 - ✅ **Configurar entornos** de desarrollo personalizados
 - ✅ **Troubleshootear** problemas del sistema rápidamente
 - ✅ **Optimizar el rendimiento** de Windows desde la línea de comandos
+- ✅ **Gestionar servidores** de red (DNS, DHCP, FTP)
+- ✅ **Implementar seguridad** avanzada con Bitlocker y políticas
+- ✅ **Administrar almacenamiento** y optimizar discos
+- ✅ **Usar herramientas avanzadas** como WMIC, CURL y gestión del registro
 
 ## 🛠️ Requisitos
 
@@ -730,14 +874,11 @@ Hemos cubierto desde los conceptos más básicos hasta las técnicas más avanza
 - 🔗 **Integración** (Capítulos 24-25): Programas externos y portapapeles
 - 📊 **Análisis** (Capítulo 26): Ordenamiento de datos
 - 🔗 **Sistema** (Capítulos 27-30): Permisos, vínculos y diagnóstico
-- 🔌 **Gestión del Sistema** (Capítulos 31-36): Control de procesos, usuarios, red y credenciales
-- 🌐 **Redes y Comunicación** (Capítulos 37-38): Redes hospedadas y mensajería en red
-- ⚡ **Control Avanzado** (Capítulos 39-40): Señales de procesos y gestión de privilegios
+- 🔌 **Gestión del Sistema** (Capítulos 31-40): Control de procesos, usuarios, red y credenciales
 - 🌐 **Servicios de Red** (Capítulos 41-45): Escritorio remoto, programación de tareas, FTP, DHCP y DNS
 - 🛡️ **Seguridad y Cifrado** (Capítulos 46-48): Bitlocker, etiquetado de discos y unidades virtuales
-- 💾 **Gestión de Almacenamiento** (Capítulos 49-52): Liberación de espacio, optimización, verificación y formateo de discos
-- 🗂️ **Particionado y Volúmenes** (Capítulos 53-54): Creación de particiones y gestión de volúmenes dinámicos
-- 🔄 **Recuperación de Datos** (Capítulo 55): Técnicas avanzadas de recuperación y restauración de sistemas
+- 💾 **Gestión de Almacenamiento** (Capítulos 49-50): Liberación de espacio y optimización de discos
+- 🔧 **Herramientas Avanzadas** (Capítulos 66-70): WMIC, Registro, CURL, Shell y Papelera de reciclaje
 
 ### 🚀 Próximos Pasos Recomendados
 - **PowerShell**: Profundiza en scripting avanzado con PowerShell
