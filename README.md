@@ -706,13 +706,7 @@ Al completar este curso serás capaz de:
 
 ## 🤝 Contribuciones
 
-¡Las contribuciones son bienvenidas! Si encuentras errores, tienes sugerencias o quieres agregar contenido:
-
-1. 🍴 Haz un fork del repositorio
-2. 🌿 Crea una rama para tu feature (`git checkout -b feature/nueva-caracteristica`)
-3. 💾 Commit tus cambios (`git commit -am 'Agregar nueva característica'`)
-4. 📤 Push a la rama (`git push origin feature/nueva-caracteristica`)
-5. 🔄 Abre un Pull Request
+Para conocer el proceso de contribución, revisa el archivo [CONTRIBUTING.md](CONTRIBUTING.md) donde encontrarás las instrucciones y buenas prácticas para colaborar en este proyecto.
 
 ## 📄 Licencia
 
@@ -798,3 +792,4 @@ Esperamos que este curso te ayude a convertirte en un experto en administración
 ---
 
 **📚 ¡Comienza tu viaje hacia el dominio de la línea de comandos de Windows!**
+
