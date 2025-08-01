@@ -22,12 +22,12 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 
 ## 📚 Contenido del Curso
 
-### 🔰 Fundamentos
+### 🔰 01. Fundamentos
 
 <details>
 <summary>0. Administración de Windows desde la Consola</summary>
 
-📖 [Ver capítulo](0.%20Administración%20de%20Windows%20desde%20la%20Consola.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/01-fundamentos/0.%20Administración%20de%20Windows%20desde%20la%20Consola.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Introducción completa al curso y roadmap de aprendizaje.
 
@@ -40,7 +40,7 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 <details>
 <summary>1. Comandos Básicos</summary>
 
-📖 [Ver capítulo](1.%20Comandos%20Básicos.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/01-fundamentos/1.%20Comandos%20Básicos.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Comandos esenciales para comenzar a trabajar con la consola.
 
@@ -53,7 +53,7 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 <details>
 <summary>2. Rutas de acceso</summary>
 
-📖 [Ver capítulo](2.%20Rutas%20de%20acceso.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/01-fundamentos/2.%20Rutas%20de%20acceso.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Comprensión de rutas absolutas y relativas en Windows.
 
@@ -66,7 +66,7 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 <details>
 <summary>3. Gestión de directorios</summary>
 
-📖 [Ver capítulo](3.%20Gestión%20de%20directorios.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/01-fundamentos/3.%20Gestión%20de%20directorios.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Creación, eliminación y gestión de directorios.
 
@@ -79,7 +79,7 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 <details>
 <summary>4. Gestión de ficheros o archivos</summary>
 
-📖 [Ver capítulo](4.%20Gestión%20de%20ficheros%20o%20archivos.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/01-fundamentos/4.%20Gestión%20de%20ficheros%20o%20archivos.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Operaciones CRUD completas con archivos.
 
@@ -92,7 +92,7 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 <details>
 <summary>5. Árbol de directorios</summary>
 
-📖 [Ver capítulo](5.%20Árbol%20de%20directorios.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/01-fundamentos/5.%20Árbol%20de%20directorios.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Visualización de la estructura de directorios.
 
@@ -102,12 +102,12 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 
 </details>
 
-### 🔄 Operaciones Avanzadas
+### 🔄 02. Operaciones Avanzadas
 
 <details>
 <summary>6. Copiar, mover archivos y directorios</summary>
 
-📖 [Ver capítulo](6.%20Copiar%2C%20mover%20archivos%20y%20directorios.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/02-operaciones-avanzadas/6.%20Copiar%2C%20mover%20archivos%20y%20directorios.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Técnicas avanzadas de copia y movimiento de archivos.
 
@@ -120,7 +120,7 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 <details>
 <summary>7. Cambiar y guardar rutas</summary>
 
-📖 [Ver capítulo](7.%20Cambiar%20y%20guardar%20rutas.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/02-operaciones-avanzadas/7.%20Cambiar%20y%20guardar%20rutas.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Gestión de rutas con pila de directorios.
 
@@ -133,7 +133,7 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 <details>
 <summary>8. Instancias</summary>
 
-📖 [Ver capítulo](8.%20Instancias.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/02-operaciones-avanzadas/8.%20Instancias.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Trabajo con múltiples instancias de la consola.
 
@@ -146,7 +146,7 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 <details>
 <summary>9. Máscaras y comodines</summary>
 
-📖 [Ver capítulo](9.%20Máscaras%20y%20comodines.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/02-operaciones-avanzadas/9.%20Máscaras%20y%20comodines.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Uso de patrones para filtrar archivos y directorios.
 
@@ -156,12 +156,12 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 
 </details>
 
-### 🎛️ Personalización y Control
+### 🎛️ 03. Personalización y Control
 
 <details>
 <summary>10. Gestión del PROMPT</summary>
 
-📖 [Ver capítulo](10.%20Gestión%20del%20PROMPT.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/03-personalizacion-control/10.%20Gestión%20del%20PROMPT.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Personalización del prompt de la consola.
 
@@ -174,7 +174,7 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 <details>
 <summary>11. Teclas de funciones</summary>
 
-📖 [Ver capítulo](11.%20Teclas%20de%20funciones.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/03-personalizacion-control/11.%20Teclas%20de%20funciones.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Uso eficiente de las teclas de función para navegación.
 
@@ -187,7 +187,7 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 <details>
 <summary>12. Manipulación de fecha y hora</summary>
 
-📖 [Ver capítulo](12.%20Manipulación%20de%20fecha%20y%20hora.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/03-personalizacion-control/12.%20Manipulación%20de%20fecha%20y%20hora.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Trabajo con fechas y horas en scripts.
 
@@ -197,12 +197,12 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 
 </details>
 
-### 🔗 Redirección y Flujo de Datos
+### 🔗 04. Redirección y Flujo de Datos
 
 <details>
 <summary>13. Uso de tuberías o PIPES</summary>
 
-📖 [Ver capítulo](13.%20Uso%20de%20tuberías%20o%20PIPES.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/04-redireccion-flujo-datos/13.%20Uso%20de%20tuberías%20o%20PIPES.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Conexión de comandos mediante tuberías.
 
@@ -215,7 +215,7 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 <details>
 <summary>14. Redireccionamiento y desvío de comandos</summary>
 
-📖 [Ver capítulo](14.%20Redireccionamiento%20y%20desvío%20de%20comandos.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/04-redireccion-flujo-datos/14.%20Redireccionamiento%20y%20desvío%20de%20comandos.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Control de entrada, salida y errores de comandos.
 
@@ -225,12 +225,12 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 
 </details>
 
-### 💾 Variables y Entorno
+### 💾 05. Variables y Entorno
 
 <details>
 <summary>15. Variables</summary>
 
-📖 [Ver capítulo](15.%20Variables.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/05-variables-entorno/15.%20Variables.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Creación y manipulación de variables locales.
 
@@ -243,7 +243,7 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 <details>
 <summary>16. Variables de entorno</summary>
 
-📖 [Ver capítulo](16.%20Variables%20de%20entorno.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/05-variables-entorno/16.%20Variables%20de%20entorno.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Gestión de variables de entorno del sistema.
 
@@ -253,12 +253,12 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 
 </details>
 
-### 🛤️ Configuración del Sistema
+### 🛤️ 06. Configuración del Sistema
 
 <details>
 <summary>17. Path - Establecer una ruta de búsqueda</summary>
 
-📖 [Ver capítulo](17.%20Path%20-%20Establecer%20una%20ruta%20de%20búsqueda.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/06-configuracion-sistema/17.%20Path%20-%20Establecer%20una%20ruta%20de%20búsqueda.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Configuración y gestión de la variable PATH del sistema.
 
@@ -271,7 +271,7 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 <details>
 <summary>18. Manejo de cadenas</summary>
 
-📖 [Ver capítulo](18.%20Manejo%20de%20cadenas.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/06-configuracion-sistema/18.%20Manejo%20de%20cadenas.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Técnicas avanzadas de manipulación de texto en batch.
 
@@ -281,12 +281,12 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 
 </details>
 
-### 🔍 Búsqueda y Análisis
+### 🔍 07. Búsqueda y Análisis
 
 <details>
 <summary>19. Buscar y Ubicar archivos</summary>
 
-📖 [Ver capítulo](19.%20Buscar%20y%20Ubicar%20archivos.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/07-busqueda-analisis/19.%20Buscar%20y%20Ubicar%20archivos.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Técnicas eficientes para localizar archivos en el sistema.
 
@@ -299,7 +299,7 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 <details>
 <summary>20. Comparar archivos o ficheros</summary>
 
-📖 [Ver capítulo](20.%20Comparar%20archivos%20o%20ficheros.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/07-busqueda-analisis/20.%20Comparar%20archivos%20o%20ficheros.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Detección de diferencias y verificación de integridad de archivos.
 
@@ -312,7 +312,7 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 <details>
 <summary>21. Buscar cadenas en archivos</summary>
 
-📖 [Ver capítulo](21.%20Buscar%20cadenas%20en%20archivos.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/07-busqueda-analisis/21.%20Buscar%20cadenas%20en%20archivos.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Búsqueda avanzada de texto dentro de archivos con expresiones regulares.
 
@@ -322,12 +322,12 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 
 </details>
 
-### 📦 Gestión de Archivos Comprimidos
+### 📦 08. Gestión de Archivos Comprimidos
 
 <details>
 <summary>22. Compresión de archivos y directorios</summary>
 
-📖 [Ver capítulo](22.%20Compresión%20de%20archivos%20y%20directorios.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/08-gestion-archivos-comprimidos/22.%20Compresión%20de%20archivos%20y%20directorios.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Técnicas de compresión nativa de Windows y creación de archivos ZIP.
 
@@ -340,7 +340,7 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 <details>
 <summary>23. Expandir archivos comprimidos</summary>
 
-📖 [Ver capítulo](23.%20Expandir%20archivos%20comprimidos.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/08-gestion-archivos-comprimidos/23.%20Expandir%20archivos%20comprimidos.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Extracción de archivos comprimidos y restauración de backups.
 
@@ -350,12 +350,12 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 
 </details>
 
-### 🔗 Integración y Automatización
+### 🔗 09. Integración y Automatización
 
 <details>
 <summary>24. Llamadas a programas externos</summary>
 
-📖 [Ver capítulo](24.%20Llamadas%20a%20programas%20externos.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/09-integracion-automatizacion/24.%20Llamadas%20a%20programas%20externos.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Integración de herramientas de terceros y creación de sistemas híbridos.
 
@@ -368,7 +368,7 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 <details>
 <summary>25. Copiar información al portapapeles</summary>
 
-📖 [Ver capítulo](25.%20Copiar%20información%20al%20portapapeles.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/09-integracion-automatizacion/25.%20Copiar%20información%20al%20portapapeles.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Manipulación del portapapeles de Windows para transferencia de datos.
 
@@ -378,12 +378,12 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 
 </details>
 
-### 📊 Análisis y Organización
+### 📊 10. Análisis y Organización
 
 <details>
 <summary>26. Ordenar datos</summary>
 
-📖 [Ver capítulo](26.%20Ordenar%20datos.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/10-analisis-organizacion/26.%20Ordenar%20datos.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Técnicas de ordenamiento y organización de datos en Windows.
 
@@ -393,12 +393,12 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 
 </details>
 
-### 🔗 Gestión de Archivos y Sistema
+### 🔗 11. Gestión de Archivos y Sistema
 
 <details>
 <summary>27. Asociar archivos con extensiones</summary>
 
-📖 [Ver capítulo](27.%20Asociar%20archivos%20con%20extensiones.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/11-gestion-archivos-sistema/27.%20Asociar%20archivos%20con%20extensiones.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Configuración de asociaciones de archivos y gestión de tipos MIME.
 
@@ -411,7 +411,7 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 <details>
 <summary>28. Asignación de permisos</summary>
 
-📖 [Ver capítulo](28.%20Asignación%20de%20permisos.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/11-gestion-archivos-sistema/28.%20Asignación%20de%20permisos.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Gestión avanzada de permisos y seguridad de archivos.
 
@@ -424,7 +424,7 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 <details>
 <summary>29. Vínculos simbólicos</summary>
 
-📖 [Ver capítulo](29.%20Vínculos%20simbólicos.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/11-gestion-archivos-sistema/29.%20Vínculos%20simbólicos.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Creación y gestión de enlaces simbólicos y puntos de unión.
 
@@ -437,7 +437,7 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 <details>
 <summary>30. Información del sistema</summary>
 
-📖 [Ver capítulo](30.%20Información%20del%20sistema.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/11-gestion-archivos-sistema/30.%20Información%20del%20sistema.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Diagnóstico completo y monitoreo del sistema Windows.
 
@@ -447,12 +447,12 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 
 </details>
 
-### 🔌 Gestión del Sistema
+### 🔌 12. Gestión del Sistema
 
 <details>
 <summary>31. Apagar, Reiniciar y Cerrar sesión</summary>
 
-📖 [Ver capítulo](31.%20Apagar%2C%20Reiniciar%20y%20Cerrar%20sesión.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/12-gestion-sistema/31.%20Apagar%2C%20Reiniciar%20y%20Cerrar%20sesión.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Control total del ciclo de vida del sistema Windows.
 
@@ -465,7 +465,7 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 <details>
 <summary>32. Gestión de usuarios</summary>
 
-📖 [Ver capítulo](32.%20Gestión%20de%20usuarios.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/12-gestion-sistema/32.%20Gestión%20de%20usuarios.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Creación, modificación y administración de cuentas de usuario.
 
@@ -478,7 +478,7 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 <details>
 <summary>33. Habilitar usuario Administrador</summary>
 
-📖 [Ver capítulo](33.%20Habilitar%20usuario%20Administrador.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/12-gestion-sistema/33.%20Habilitar%20usuario%20Administrador.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Gestión segura de la cuenta de Administrador del sistema.
 
@@ -491,7 +491,7 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 <details>
 <summary>34. Gestión de Procesos</summary>
 
-📖 [Ver capítulo](34.%20Gestión%20de%20Procesos.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/12-gestion-sistema/34.%20Gestión%20de%20Procesos.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Control y administración de procesos del sistema.
 
@@ -504,7 +504,7 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 <details>
 <summary>35. Conexiones de red</summary>
 
-📖 [Ver capítulo](35.%20Conexiones%20de%20red.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/12-gestion-sistema/35.%20Conexiones%20de%20red.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Diagnóstico y gestión de conexiones de red del sistema.
 
@@ -517,7 +517,7 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 <details>
 <summary>36. Obtener contraseñas guardadas</summary>
 
-📖 [Ver capítulo](36.%20Obtener%20contraseñas%20guardadas.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/12-gestion-sistema/36.%20Obtener%20contraseñas%20guardadas.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Recuperación y gestión de credenciales almacenadas en Windows.
 
@@ -530,7 +530,7 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 <details>
 <summary>37. Crear red hospedada</summary>
 
-📖 [Ver capítulo](37.%20Crear%20red%20hospedada.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/12-gestion-sistema/37.%20Crear%20red%20hospedada.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Configuración de puntos de acceso WiFi y redes virtuales en Windows.
 
@@ -543,7 +543,7 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 <details>
 <summary>38. Enviar mensajes a usuarios</summary>
 
-📖 [Ver capítulo](38.%20Enviar%20mensajes%20a%20usuarios.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/12-gestion-sistema/38.%20Enviar%20mensajes%20a%20usuarios.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Comunicación en red y envío de alertas a usuarios conectados.
 
@@ -556,7 +556,7 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 <details>
 <summary>39. Envío de señales</summary>
 
-📖 [Ver capítulo](39.%20Envío%20de%20señales.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/12-gestion-sistema/39.%20Envío%20de%20señales.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Control avanzado de procesos mediante envío de señales del sistema.
 
@@ -569,7 +569,7 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 <details>
 <summary>40. Ejecutar como Administrador - RUNAS</summary>
 
-📖 [Ver capítulo](40.%20Ejecutar%20como%20Administrador%20-%20RUNAS.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/12-gestion-sistema/40.%20Ejecutar%20como%20Administrador%20-%20RUNAS.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Gestión segura de privilegios y elevación de permisos en Windows.
 
@@ -579,12 +579,12 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 
 </details>
 
-### 🌐 Servicios de Red
+### 🌐 13. Servicios de Red
 
 <details>
 <summary>41. Escritorio Remoto</summary>
 
-📖 [Ver capítulo](41.%20Escritorio%20Remoto.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/13-servicios-red/41.%20Escritorio%20Remoto.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Configuración y gestión de conexiones remotas con RDP en Windows.
 
@@ -597,7 +597,7 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 <details>
 <summary>42. Programador de Tareas</summary>
 
-📖 [Ver capítulo](42.%20Programador%20de%20Tareas.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/13-servicios-red/42.%20Programador%20de%20Tareas.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Automatización completa de tareas y procesos del sistema Windows.
 
@@ -610,7 +610,7 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 <details>
 <summary>43. Gestión de un servidor FTP</summary>
 
-📖 [Ver capítulo](43.%20Gestión%20de%20un%20servidor%20FTP.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/13-servicios-red/43.%20Gestión%20de%20un%20servidor%20FTP.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Configuración y administración de servidores FTP para transferencia de archivos.
 
@@ -623,7 +623,7 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 <details>
 <summary>44. Gestión de un servidor DHCP</summary>
 
-📖 [Ver capítulo](44.%20Gestión%20de%20un%20servidor%20DHCP.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/13-servicios-red/44.%20Gestión%20de%20un%20servidor%20DHCP.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Administración de servidores DHCP para asignación automática de direcciones IP.
 
@@ -636,7 +636,7 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 <details>
 <summary>45. Gestión de un servidor DNS</summary>
 
-📖 [Ver capítulo](45.%20Gestión%20de%20un%20servidor%20DNS.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/13-servicios-red/45.%20Gestión%20de%20un%20servidor%20DNS.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Configuración y administración de servidores DNS para resolución de nombres.
 
@@ -646,12 +646,12 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 
 </details>
 
-### 🛡️ Seguridad y Cifrado
+### 🛡️ 14. Seguridad y Cifrado
 
 <details>
 <summary>46. Bitlocker</summary>
 
-📖 [Ver capítulo](46.%20Bitlocker.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/14-seguridad-cifrado/46.%20Bitlocker.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Configuración y gestión completa del cifrado de discos con Bitlocker.
 
@@ -664,7 +664,7 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 <details>
 <summary>47. Etiquetar discos</summary>
 
-📖 [Ver capítulo](47.%20Etiquetar%20discos.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/14-seguridad-cifrado/47.%20Etiquetar%20discos.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Gestión avanzada de etiquetas de volúmenes y organización de almacenamiento.
 
@@ -677,7 +677,7 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 <details>
 <summary>48. Unidad Virtual</summary>
 
-📖 [Ver capítulo](48.%20Unidad%20Virtual.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/14-seguridad-cifrado/48.%20Unidad%20Virtual.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Creación y gestión de unidades virtuales y montaje de imágenes de disco.
 
@@ -687,12 +687,12 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 
 </details>
 
-### 💾 Gestión de Almacenamiento
+### 💾 15. Gestión de Almacenamiento
 
 <details>
 <summary>49. Liberar espacio en disco</summary>
 
-📖 [Ver capítulo](49.%20Liberar%20espacio%20en%20disco.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/15-gestion-almacenamiento/49.%20Liberar%20espacio%20en%20disco.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Técnicas avanzadas para liberar espacio en disco y optimizar el almacenamiento.
 
@@ -705,7 +705,7 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 <details>
 <summary>50. Optimizar y desfragmentar disco</summary>
 
-📖 [Ver capítulo](50.%20Optimizar%20y%20desfragmentar%20disco.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/15-gestion-almacenamiento/50.%20Optimizar%20y%20desfragmentar%20disco.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Optimización y mantenimiento avanzado de discos duros y SSDs.
 
@@ -715,12 +715,207 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 
 </details>
 
-### 🔧 Herramientas Avanzadas de Administración
+<details>
+<summary>51. Comprobar disco y mostrar información de estado</summary>
+
+📖 [Ver capítulo](docs/15-gestion-almacenamiento/51.%20Comprobar%20disco%20y%20mostrar%20información%20de%20estado.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Diagnóstico completo y análisis de estado de discos y volúmenes.
+
+**Comandos:** CHKDSK, FSUTIL, WMIC, SMART, análisis de rendimiento.
+
+**Ejemplos prácticos:** Monitoreo de salud de discos, detección temprana de fallos, auditorías de almacenamiento.
+
+</details>
+
+<details>
+<summary>52. Formatear discos</summary>
+
+📖 [Ver capítulo](docs/15-gestion-almacenamiento/52.%20Formatear%20discos.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Técnicas avanzadas de formateo y preparación de discos para uso.
+
+**Comandos:** FORMAT, DISKPART, FSUTIL, PowerShell Format-Volume, gestión de sistemas de archivos.
+
+**Ejemplos prácticos:** Preparación de discos nuevos, cambio de sistemas de archivos, formateo masivo.
+
+</details>
+
+<details>
+<summary>53. Crear particiones de disco</summary>
+
+📖 [Ver capítulo](docs/15-gestion-almacenamiento/53.%20Crear%20particiones%20de%20disco.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Gestión avanzada de particiones y volúmenes de disco.
+
+**Comandos:** DISKPART, FDISK, PowerShell New-Partition, gestión de tipos de partición.
+
+**Ejemplos prácticos:** Configuración de discos múltiples, creación de arrays, optimización de almacenamiento.
+
+</details>
+
+<details>
+<summary>54. Desmontar, Extender volúmenes de disco</summary>
+
+📖 [Ver capítulo](docs/15-gestion-almacenamiento/54.%20Desmontar%2C%20Extender%20volúmenes%20de%20disco.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Gestión dinámica de volúmenes y puntos de montaje.
+
+**Comandos:** DISKPART, MOUNTVOL, PowerShell Mount-DiskImage, gestión de volúmenes dinámicos.
+
+**Ejemplos prácticos:** Expansión de almacenamiento, gestión de puntos de montaje, virtualización de discos.
+
+</details>
+
+<details>
+<summary>55. Recuperar información</summary>
+
+📖 [Ver capítulo](docs/15-gestion-almacenamiento/55.%20Recuperar%20información.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Técnicas avanzadas de recuperación de datos y archivos perdidos.
+
+**Comandos:** RECUVA, TESTDISK, PowerShell, herramientas de recuperación especializadas.
+
+**Ejemplos prácticos:** Recuperación de archivos eliminados, reparación de discos corruptos, backup de emergencia.
+
+</details>
+
+<details>
+<summary>56. Examinar integridad de los datos</summary>
+
+📖 [Ver capítulo](docs/15-gestion-almacenamiento/56.%20Examinar%20integridad%20de%20los%20datos.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Verificación y validación de integridad de archivos y datos.
+
+**Comandos:** CERTUTIL, FCIV, PowerShell Get-FileHash, verificación de checksums.
+
+**Ejemplos prácticos:** Auditorías de integridad, detección de corrupción, validación de backups.
+
+</details>
+
+<details>
+<summary>57. Uso de Robocopy</summary>
+
+📖 [Ver capítulo](docs/15-gestion-almacenamiento/57.%20Uso%20de%20Robocopy.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Copia robusta y sincronización avanzada de archivos y directorios.
+
+**Comandos:** ROBOCOPY, sincronización bidireccional, manejo de errores, logging detallado.
+
+**Ejemplos prácticos:** Sincronización de servidores, backup incremental, migración de datos.
+
+</details>
+
+<details>
+<summary>58. Backups</summary>
+
+📖 [Ver capítulo](docs/15-gestion-almacenamiento/58.%20Backups.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Estrategias completas de backup y recuperación de sistemas.
+
+**Comandos:** WBADMIN, ROBOCOPY, PowerShell, herramientas de backup especializadas.
+
+**Ejemplos prácticos:** Backup automático, recuperación de sistemas, estrategias de retención.
+
+</details>
+
+<details>
+<summary>59. Comprobar la seguridad en el sistema</summary>
+
+📖 [Ver capítulo](docs/15-gestion-almacenamiento/59.%20Comprobar%20la%20seguridad%20en%20el%20sistema.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Auditorías de seguridad y análisis de vulnerabilidades del sistema.
+
+**Comandos:** SECEDIT, AUDITPOL, PowerShell, herramientas de análisis de seguridad.
+
+**Ejemplos prácticos:** Auditorías de cumplimiento, detección de vulnerabilidades, hardening de sistemas.
+
+</details>
+
+<details>
+<summary>60. Gestionar Credenciales Almacenadas</summary>
+
+📖 [Ver capítulo](docs/15-gestion-almacenamiento/60.%20Gestionar%20Credenciales%20Almacenadas.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Gestión segura de credenciales y autenticación del sistema.
+
+**Comandos:** CMDKEY, PowerShell, gestión de certificados, almacenamiento seguro.
+
+**Ejemplos prácticos:** Gestión de credenciales corporativas, automatización de autenticación, auditorías de acceso.
+
+</details>
+
+<details>
+<summary>61. Información de rendimiento de recursos</summary>
+
+📖 [Ver capítulo](docs/15-gestion-almacenamiento/61.%20Información%20de%20rendimiento%20de%20recursos.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Monitoreo y análisis de rendimiento del sistema y recursos.
+
+**Comandos:** PERFMON, TYPE PERF, PowerShell Get-Counter, análisis de métricas.
+
+**Ejemplos prácticos:** Monitoreo de rendimiento, optimización de recursos, detección de cuellos de botella.
+
+</details>
+
+<details>
+<summary>62. Configuración de Energía</summary>
+
+📖 [Ver capítulo](docs/15-gestion-almacenamiento/62.%20Configuración%20de%20Energía.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Gestión avanzada de planes de energía y optimización energética.
+
+**Comandos:** POWERCFG, gestión de planes de energía, análisis de consumo.
+
+**Ejemplos prácticos:** Optimización energética, configuración de hibernación, gestión de baterías.
+
+</details>
+
+<details>
+<summary>63. Gestionar Servicios</summary>
+
+📖 [Ver capítulo](docs/15-gestion-almacenamiento/63.%20Gestionar%20Servicios.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Administración completa de servicios del sistema Windows.
+
+**Comandos:** SC, NET START/STOP, PowerShell Get-Service, gestión de dependencias.
+
+**Ejemplos prácticos:** Configuración de servicios críticos, automatización de servicios, troubleshooting.
+
+</details>
+
+<details>
+<summary>64. Windows To Go</summary>
+
+📖 [Ver capítulo](docs/15-gestion-almacenamiento/64.%20Windows%20To%20Go.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Creación y gestión de Windows portátil en unidades USB.
+
+**Comandos:** DISKPART, herramientas de Windows To Go, configuración de arranque.
+
+**Ejemplos prácticos:** Windows portátil, recuperación de emergencia, despliegue rápido.
+
+</details>
+
+<details>
+<summary>65. Utilidad de zona horaria de Windows</summary>
+
+📖 [Ver capítulo](docs/15-gestion-almacenamiento/65.%20Utilidad%20de%20zona%20horaria%20de%20Windows.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+
+**Descripción:** Gestión de zonas horarias y sincronización de tiempo del sistema.
+
+**Comandos:** TZUTIL, W32TM, configuración de zonas horarias, sincronización NTP.
+
+**Ejemplos prácticos:** Configuración de servidores globales, sincronización de tiempo, gestión de zonas horarias.
+
+</details>
+
+### 🔧 16. Herramientas Avanzadas de Administración
 
 <details>
 <summary>66. Administración de Windows - WMIC</summary>
 
-📖 [Ver capítulo](66.%20Administración%20de%20Windows%20-%20WMIC.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/16-herramientas-avanzadas/66.%20Administración%20de%20Windows%20-%20WMIC.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Uso avanzado de Windows Management Instrumentation Command para administración del sistema.
 
@@ -733,7 +928,7 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 <details>
 <summary>67. Registros</summary>
 
-📖 [Ver capítulo](67.%20Registros.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/16-herramientas-avanzadas/67.%20Registros.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Gestión completa del Registro de Windows desde la línea de comandos.
 
@@ -746,7 +941,7 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 <details>
 <summary>68. CURL</summary>
 
-📖 [Ver capítulo](68.%20CURL.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/16-herramientas-avanzadas/68.%20CURL.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Uso avanzado de CURL para transferencias HTTP, HTTPS, FTP y gestión de archivos remotos.
 
@@ -759,7 +954,7 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 <details>
 <summary>69. SHELL</summary>
 
-📖 [Ver capítulo](69.%20SHELL.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/16-herramientas-avanzadas/69.%20SHELL.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Gestión avanzada del shell de Windows y automatización del entorno de trabajo.
 
@@ -772,7 +967,7 @@ Este curso te llevará desde los conceptos básicos hasta técnicas avanzadas de
 <details>
 <summary>70. Papelera de reciclaje</summary>
 
-📖 [Ver capítulo](70.%20Papelera%20de%20reciclaje.md) | 🎥 [YouTube](https://youtu.be/placeholder)
+📖 [Ver capítulo](docs/16-herramientas-avanzadas/70.%20Papelera%20de%20reciclaje.md) | 🎥 [YouTube](https://youtu.be/placeholder)
 
 **Descripción:** Gestión avanzada de la papelera de reciclaje y recuperación de archivos eliminados.
 
