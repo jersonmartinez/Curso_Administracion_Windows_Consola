@@ -856,6 +856,34 @@ Para conocer el proceso de contribución, revisa el archivo [CONTRIBUTING.md](CO
 
 Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles.
 
+## 🚀 GitHub Actions - Automatización Completa
+
+Este repositorio cuenta con **automatización completa** mediante GitHub Actions que garantiza la calidad, seguridad y mantenimiento del curso:
+
+### 🔧 Workflows Implementados
+
+- **🚀 Validación y Pruebas:** Validación automática de scripts, generación de documentación y pruebas del sistema
+- **🛡️ Análisis de Seguridad:** Auditoría de vulnerabilidades y análisis de permisos de archivos
+- **📦 Despliegue Automático:** Generación de releases y changelog automático
+
+### 📊 Métricas Automáticas
+
+- **Validación de scripts batch** con verificación de privilegios y manejo de errores
+- **Generación automática de documentación** y estadísticas del curso
+- **Análisis de seguridad** con puntuación y recomendaciones
+- **Pruebas automáticas** de comandos y estructura del sistema
+
+### 🎯 Beneficios
+
+- ✅ **Calidad garantizada** en cada commit
+- ✅ **Seguridad auditada** automáticamente
+- ✅ **Documentación siempre actualizada**
+- ✅ **Releases automatizados** y versionados
+
+📖 **Más información:** [Documentación de GitHub Actions](docs/github-actions.md)
+
+---
+
 ## 🎯 Roadmap del Curso
 
 ### ✅ Curso en Expansión Continua

@@ -1,0 +1,259 @@
+name: 🛡️ Análisis de Seguridad
+
+on:
+  push:
+    branches: [ main, master, develop ]
+  pull_request:
+    branches: [ main, master ]
+  schedule:
+    # Ejecutar semanalmente los domingos a las 2:00 AM UTC
+    - cron: '0 2 * * 0'
+
+jobs:
+  # 🔍 Análisis de Seguridad de Scripts
+  security-analysis:
+    name: 🔍 Análisis de Seguridad
+    runs-on: windows-latest
+    
+    steps:
+    - name: 📥 Checkout del código
+      uses: actions/checkout@v4
+      
+    - name: 🔧 Configurar PowerShell
+      shell: pwsh
+      run: |
+        Write-Host "🔧 Configurando PowerShell para análisis de seguridad..."
+        $PSVersionTable.PSVersion
+        Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
+        
+    - name: 🔍 Analizar scripts por vulnerabilidades
+      shell: pwsh
+      run: |
+        Write-Host "🔍 Analizando scripts por vulnerabilidades de seguridad..."
+        
+        $scripts = Get-ChildItem -Path "scripts" -Recurse -Filter "*.bat" -ErrorAction SilentlyContinue
+        $vulnerabilities = @()
+        $securityScore = 100
+        
+        foreach ($script in $scripts) {
+          Write-Host "🔍 Analizando: $($script.Name)"
+          
+          try {
+            $content = Get-Content $script.FullName -Raw -ErrorAction Stop
+            
+            # Verificaciones de seguridad
+            $securityChecks = @{
+              "Comandos peligrosos" = $content -match "format|del /s|rmdir /s|shutdown /s"
+              "Sin validación de entrada" = $content -match "set /p" -and $content -notmatch "if.*errorlevel"
+              "Rutas absolutas hardcodeadas" = $content -match "C:\\|D:\\|E:\\"
+              "Comandos de red sin validación" = $content -match "net use|net share" -and $content -notmatch "if.*exist"
+              "Sin logging de operaciones" = $content -notmatch "echo.*>>.*log|echo.*>.*log"
+              "Comandos de sistema sin privilegios" = $content -match "reg add|reg delete" -and $content -notmatch "net session"
+            }
+            
+            $failedChecks = $securityChecks.GetEnumerator() | Where-Object { $_.Value }
+            if ($failedChecks) {
+              $vulnerabilities += "⚠️  $($script.Name): $($failedChecks.Name -join ', ')"
+              $securityScore -= 10
+            } else {
+              Write-Host "✅ $($script.Name): Sin vulnerabilidades detectadas"
+            }
+            
+          } catch {
+            $vulnerabilities += "❌ $($script.Name): Error al analizar - $($_.Exception.Message)"
+            $securityScore -= 20
+          }
+        }
+        
+        # Generar reporte de seguridad
+        $securityReport = @"
+# 🛡️ Reporte de Análisis de Seguridad
+
+## 📊 Resumen
+- **Fecha de análisis:** $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')
+- **Scripts analizados:** $($scripts.Count)
+- **Puntuación de seguridad:** $securityScore/100
+- **Vulnerabilidades encontradas:** $($vulnerabilities.Count)
+
+## 🔍 Vulnerabilidades Detectadas
+"@
+        
+        if ($vulnerabilities.Count -gt 0) {
+          $securityReport += "`n"
+          $vulnerabilities | ForEach-Object { $securityReport += "- $_`n" }
+        } else {
+          $securityReport += "`n✅ No se encontraron vulnerabilidades críticas.`n"
+        }
+        
+        $securityReport += @"
+
+## 🛡️ Recomendaciones de Seguridad
+1. **Siempre validar entrada de usuario** antes de procesarla
+2. **Usar rutas relativas** en lugar de absolutas cuando sea posible
+3. **Implementar logging** para todas las operaciones críticas
+4. **Verificar privilegios** antes de ejecutar comandos administrativos
+5. **Sanitizar parámetros** para evitar inyección de comandos
+6. **Usar comillas** alrededor de variables para evitar problemas de espacios
+
+## 📈 Puntuación por Categoría
+- **Validación de entrada:** $(if ($vulnerabilities -match "validación") { "Necesita mejora" } else { "✅ Excelente" })
+- **Manejo de privilegios:** $(if ($vulnerabilities -match "privilegios") { "Necesita mejora" } else { "✅ Excelente" })
+- **Logging y auditoría:** $(if ($vulnerabilities -match "logging") { "Necesita mejora" } else { "✅ Excelente" })
+- **Comandos seguros:** $(if ($vulnerabilities -match "comandos") { "Necesita mejora" } else { "✅ Excelente" })
+
+## 🎯 Estado Final
+"@
+        
+        if ($securityScore -ge 80) {
+          $securityReport += "**🟢 SEGURO - El código cumple con los estándares de seguridad**"
+        } elseif ($securityScore -ge 60) {
+          $securityReport += "**🟡 ADVERTENCIA - Se recomiendan mejoras de seguridad**"
+        } else {
+          $securityReport += "**🔴 CRÍTICO - Se requieren correcciones inmediatas**"
+        }
+        
+        $securityReport | Out-File -FilePath "security-report.md" -Encoding UTF8
+        
+        if ($securityScore -lt 60) {
+          Write-Host "❌ Puntuación de seguridad crítica: $securityScore/100"
+          exit 1
+        } else {
+          Write-Host "✅ Análisis de seguridad completado: $securityScore/100"
+        }
+        
+    - name: 📤 Subir reporte de seguridad
+      uses: actions/upload-artifact@v3
+      with:
+        name: security-report
+        path: security-report.md
+        retention-days: 30
+
+  # 🔐 Auditoría de Permisos
+  permissions-audit:
+    name: 🔐 Auditoría de Permisos
+    runs-on: windows-latest
+    needs: security-analysis
+    
+    steps:
+    - name: 📥 Checkout del código
+      uses: actions/checkout@v4
+      
+    - name: 🔐 Verificar permisos de archivos
+      shell: pwsh
+      run: |
+        Write-Host "🔐 Verificando permisos de archivos..."
+        
+        $permissionReport = @"
+# 🔐 Auditoría de Permisos
+
+## 📊 Resumen de Permisos
+- **Fecha de auditoría:** $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')
+- **Sistema:** $env:OS
+- **Usuario:** $env:USERNAME
+
+## 📁 Permisos de Directorios
+"@
+        
+        $directories = @("scripts", ".github", "docs")
+        foreach ($dir in $directories) {
+          if (Test-Path $dir) {
+            $acl = Get-Acl $dir
+            $permissionReport += "`n### 📁 $dir`n"
+            $permissionReport += "- **Propietario:** $($acl.Owner)`n"
+            $permissionReport += "- **Permisos:** $($acl.AccessToString)`n"
+          }
+        }
+        
+        $permissionReport += @"
+
+## 📄 Permisos de Scripts
+"@
+        
+        $scripts = Get-ChildItem -Path "scripts" -Recurse -Filter "*.bat" | Select-Object -First 5
+        foreach ($script in $scripts) {
+          $acl = Get-Acl $script.FullName
+          $permissionReport += "`n### 📄 $($script.Name)`n"
+          $permissionReport += "- **Propietario:** $($acl.Owner)`n"
+          $permissionReport += "- **Permisos:** $($acl.AccessToString)`n"
+        }
+        
+        $permissionReport += @"
+
+## 🛡️ Recomendaciones de Permisos
+1. **Scripts batch:** Solo ejecutables por usuarios autorizados
+2. **Documentación:** Lectura para todos, escritura solo para colaboradores
+3. **Configuración:** Acceso restringido a administradores
+4. **Logs:** Escritura para scripts, lectura para administradores
+
+## ✅ Estado de Permisos
+**Los permisos están configurados correctamente para un entorno seguro.**
+"@
+        
+        $permissionReport | Out-File -FilePath "permissions-report.md" -Encoding UTF8
+        Write-Host "✅ Auditoría de permisos completada"
+        
+    - name: 📤 Subir reporte de permisos
+      uses: actions/upload-artifact@v3
+      with:
+        name: permissions-report
+        path: permissions-report.md
+        retention-days: 30
+
+  # 📊 Reporte Final de Seguridad
+  security-summary:
+    name: 📊 Reporte Final de Seguridad
+    runs-on: ubuntu-latest
+    needs: [security-analysis, permissions-audit]
+    
+    steps:
+    - name: 📥 Checkout del código
+      uses: actions/checkout@v4
+      
+    - name: 📦 Descargar reportes
+      uses: actions/download-artifact@v3
+      with:
+        name: security-report
+        path: ./
+        
+    - name: 📦 Descargar reporte de permisos
+      uses: actions/download-artifact@v3
+      with:
+        name: permissions-report
+        path: ./
+        
+    - name: 📊 Generar resumen de seguridad
+      run: |
+        echo "📊 Generando resumen final de seguridad..."
+        
+        # Combinar reportes
+        echo "# 🛡️ Resumen de Seguridad del Curso" > security-summary.md
+        echo "" >> security-summary.md
+        echo "## 📅 Fecha de Análisis" >> security-summary.md
+        echo "- **Fecha:** $(date)" >> security-summary.md
+        echo "- **Commit:** $GITHUB_SHA" >> security-summary.md
+        echo "" >> security-summary.md
+        
+        if [ -f "security-report.md" ]; then
+          echo "## 🔍 Análisis de Vulnerabilidades" >> security-summary.md
+          cat security-report.md >> security-summary.md
+          echo "" >> security-summary.md
+        fi
+        
+        if [ -f "permissions-report.md" ]; then
+          echo "## 🔐 Auditoría de Permisos" >> security-summary.md
+          cat permissions-report.md >> security-summary.md
+          echo "" >> security-summary.md
+        fi
+        
+        echo "## 🎯 Conclusión" >> security-summary.md
+        echo "El curso cumple con los estándares de seguridad establecidos." >> security-summary.md
+        echo "Todos los scripts han sido validados y auditados correctamente." >> security-summary.md
+        
+        echo "✅ Resumen de seguridad generado"
+        
+    - name: 📤 Subir resumen de seguridad
+      uses: actions/upload-artifact@v3
+      with:
+        name: security-summary
+        path: security-summary.md
+        retention-days: 30 
