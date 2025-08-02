@@ -4,6 +4,7 @@ echo  RECUPERAR PARTICION PERDIDA
 echo ========================================
 echo.
 
+REM Listar discos disponibles
 echo Discos disponibles:
 diskpart /s <(echo list disk)
 
@@ -15,11 +16,13 @@ echo select disk %disco% > recover_partition.txt
 echo list partition >> recover_partition.txt
 echo list volume >> recover_partition.txt
 
+REM Buscar particiones eliminadas
 echo.
 echo Buscando particiones eliminadas...
 echo select disk %disco% >> recover_partition.txt
 echo list partition >> recover_partition.txt
 
+REM Intentar recuperar partición
 echo.
 echo Intentando recuperar partición...
 echo select disk %disco% >> recover_partition.txt

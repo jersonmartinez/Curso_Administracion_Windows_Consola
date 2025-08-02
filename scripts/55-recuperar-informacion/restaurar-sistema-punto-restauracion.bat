@@ -4,12 +4,14 @@ echo  RESTAURAR SISTEMA
 echo ========================================
 echo.
 
+REM Listar puntos de restauración disponibles
 echo Puntos de restauración disponibles:
 wmic.exe /Namespace:\\root\default Path SystemRestore Call GetRestorePoints
 
 echo.
 set /p punto="ID del punto de restauración: "
 
+REM Crear script de restauración
 echo @echo off > restore_system.bat
 echo echo Restaurando sistema al punto %punto%... >> restore_system.bat
 echo rstrui.exe /restorepoint:%punto% >> restore_system.bat
