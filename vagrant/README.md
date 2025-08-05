@@ -1,8 +1,8 @@
-# Windows 10 Lab Environment for Batch Script Testing
+# 🖥️ Entorno de Pruebas para Scripts Batch y PowerShell
 
-Este entorno permite crear una máquina virtual Windows 10 optimizada para pruebas de scripts Batch y administración desde la consola, usando Vagrant y VirtualBox.
+Este entorno proporciona una máquina virtual Windows 10 completamente optimizada para el desarrollo, pruebas y aprendizaje de scripts Batch y PowerShell. Incluye herramientas de desarrollo, configuraciones optimizadas y un entorno listo para usar.
 
-## 🚀 Guía Rápida
+## 🚀 Inicio Rápido
 
 ### 1. Configurar Entorno
 ```bash
@@ -23,16 +23,20 @@ vagrant up
 - **Usuario:** `batchtester`
 - **Contraseña:** `P@ssw0rd123`
 
-### 4. Scripts Disponibles
-Los scripts Batch estarán en `C:\BatchScripts` dentro de la VM.
+### 4. ¡Listo para Usar!
+Los scripts Batch y PowerShell estarán en `C:\BatchScripts` dentro de la VM.
 
-## 📋 Requisitos
+## 📋 Requisitos del Sistema
 
+### Software Requerido
 - [Vagrant](https://www.vagrantup.com/downloads) (versión 2.0+)
 - [VirtualBox](https://www.virtualbox.org/wiki/Downloads) (versión 6.0+)
 - Windows 10/11 como sistema host
-- Mínimo 8GB RAM disponible
-- 50GB espacio libre en disco
+
+### Recursos Mínimos
+- **RAM:** 8GB disponible (16GB recomendado)
+- **Disco:** 50GB espacio libre
+- **CPU:** 4 núcleos recomendados
 
 ## ⚙️ Configuración de la VM
 
@@ -41,10 +45,31 @@ Los scripts Batch estarán en `C:\BatchScripts` dentro de la VM.
 | **Sistema Operativo** | Windows 10 | Sí (box) |
 | **RAM** | 16GB | Sí (.env.vagrant) |
 | **CPU** | 4 núcleos | Sí (.env.vagrant) |
-| **Disco** | 40GB | Sí (.env.vagrant) |
+| **Disco** | 120GB | Sí (.env.vagrant) |
 | **Red** | Host-only + RDP | Sí (.env.vagrant) |
 | **Usuario** | `batchtester` | Sí (.env.vagrant) |
 | **Contraseña** | `P@ssw0rd123` | Sí (.env.vagrant) |
+
+## 🛠️ Herramientas Instaladas
+
+### Editores y IDEs
+- **Notepad++** - Editor de texto avanzado
+- **Visual Studio Code** - IDE moderno
+- **PowerShell ISE** - Editor integrado de PowerShell
+
+### Utilidades del Sistema
+- **7-Zip** - Compresión de archivos
+- **Git** - Control de versiones
+- **Windows Terminal** - Terminal moderno
+
+### Herramientas de Análisis
+- **Sysinternals Suite** - Herramientas avanzadas de Windows (instalación manual recomendada)
+- **Process Explorer** - Monitoreo de procesos (disponible en Sysinternals)
+- **Autoruns** - Análisis de inicio del sistema (disponible en Sysinternals)
+
+### Scripts de Prueba
+- **Script de muestra** - `C:\BatchScripts\test\sample-test.bat`
+- **Directorios organizados** - test, logs, temp, backup
 
 ## 🔧 Personalización
 
@@ -84,6 +109,29 @@ VAGRANT_SCRIPTS_PATH=../scripts
 VAGRANT_SCRIPTS_DESTINATION=C:/BatchScripts
 ```
 
+## 🎯 Características Optimizadas
+
+### Configuración de Windows
+- **PowerShell Execution Policy** - Configurado para desarrollo
+- **Explorer** - Extensiones y archivos ocultos visibles
+- **Command Prompt** - Colores y QuickEdit habilitados
+- **UAC** - Reducido para desarrollo
+- **Long Path Support** - Habilitado
+- **Windows Defender** - Exclusiones para scripts
+
+### Rendimiento
+- **Power Settings** - Alto rendimiento
+- **Visual Effects** - Optimizados para rendimiento
+- **Windows Update** - Sin reinicio automático
+
+### Accesos Directos
+- **BatchScripts** - Carpeta de scripts
+- **Command Prompt** - En directorio de scripts
+- **PowerShell** - En directorio de scripts
+- **PowerShell ISE** - Editor integrado
+- **Notepad++** - Editor avanzado
+- **Windows Terminal** - Terminal moderno
+
 ## 🛠️ Comandos Útiles
 
 ### Gestión de la VM
@@ -104,6 +152,35 @@ vagrant port            # Ver puertos asignados
 ### Mantenimiento
 ```bash
 cleanup.bat             # Limpiar archivos temporales
+```
+
+## 📁 Estructura del Proyecto
+
+```
+vagrant/
+├── Vagrantfile                 # Configuración principal
+├── env.vagrant.example         # Variables de entorno (ejemplo)
+├── .env.vagrant               # Variables de entorno (personalizado)
+├── cleanup.bat                # Script de limpieza
+├── provision/                 # Scripts de provisión
+│   ├── create-user.ps1        # Crear usuario y RDP
+│   ├── install-guest-additions.ps1  # Instalar Guest Additions
+│   ├── configure-windows.ps1  # Configurar Windows
+│   └── install-dev-tools.ps1  # Instalar herramientas de desarrollo
+├── README.md                  # Este archivo
+└── RDP.md                     # Guía de conexión RDP
+```
+
+## 📂 Estructura en la VM
+
+```
+C:\BatchScripts\
+├── test\                      # Scripts de prueba
+│   └── sample-test.bat        # Script de muestra
+├── logs\                      # Archivos de log
+├── temp\                      # Archivos temporales
+├── backup\                    # Copias de seguridad
+└── [scripts del curso]        # Scripts del curso
 ```
 
 ## 🔒 Seguridad
@@ -139,35 +216,49 @@ cleanup.bat             # Limpiar archivos temporales
    - La VM funcionará sin Guest Additions
    - Reinstalar VirtualBox si es necesario
 
+5. **Errores de instalación de herramientas**
+   - Algunos paquetes pueden fallar por problemas de red o checksum
+   - Las herramientas principales (Notepad++, Git, VS Code) se instalan automáticamente
+   - Sysinternals se puede instalar manualmente desde la web oficial
+   - La VM funcionará correctamente incluso si algunas herramientas fallan
+
+6. **Errores de usuario "Cannot remove the last Administrator"**
+   - Es normal si el usuario ya existe o hay restricciones de política
+   - El entorno seguirá funcionando correctamente
+   - RDP estará disponible con las credenciales configuradas
+
+7. **Errores de "Security error" en configuración de Windows**
+   - Es normal debido a restricciones de política o permisos
+   - Las configuraciones principales se aplicarán correctamente
+   - El entorno seguirá siendo funcional para desarrollo
+
+8. **Errores de sintaxis en scripts de PowerShell**
+   - Corregidos en las últimas versiones
+   - Los scripts ahora manejan errores de manera robusta
+   - La provisión continuará incluso si algunos pasos fallan
+
 ### Logs y Debugging
 ```bash
 vagrant up --debug      # Modo debug
 vagrant provision       # Re-ejecutar provisión
 ```
 
-## 📁 Estructura del Proyecto
+## 🎓 Casos de Uso
 
-```
-vagrant/
-├── Vagrantfile                 # Configuración principal
-├── env.vagrant.example         # Variables de entorno (ejemplo)
-├── .env.vagrant               # Variables de entorno (personalizado)
-├── cleanup.bat                # Script de limpieza
-├── provision/                 # Scripts de provisión
-│   ├── create-user.ps1        # Crear usuario y RDP
-│   ├── install-guest-additions.ps1  # Instalar Guest Additions
-│   └── configure-windows.ps1  # Configurar Windows
-├── README.md                  # Este archivo
-└── RDP.md                     # Guía de conexión RDP
-```
+### Para Aprendizaje
+- Pruebas seguras de scripts
+- Experimentación con comandos
+- Entorno aislado para prácticas
 
-## 🎯 Características Optimizadas
+### Para Desarrollo
+- Testing de scripts antes de producción
+- Debugging en entorno controlado
+- Desarrollo de automatizaciones
 
-- **Provisión modular** con scripts PowerShell separados
-- **Configuración flexible** mediante variables de entorno
-- **Mensajes informativos** durante la provisión
-- **Configuración de Windows** optimizada para desarrollo
-- **Accesos directos** en el escritorio para herramientas comunes
+### Para Administración
+- Pruebas de scripts de administración
+- Validación de configuraciones
+- Testing de políticas de grupo
 
 ## 📞 Soporte
 
@@ -175,6 +266,14 @@ Para problemas específicos:
 1. Revisar logs con `vagrant up --debug`
 2. Verificar configuración en `.env.vagrant`
 3. Consultar documentación de Vagrant y VirtualBox
+
+## 🔄 Actualizaciones
+
+Para aplicar nuevas configuraciones:
+```bash
+vagrant provision        # Re-ejecutar provisión
+vagrant reload --provision  # Reiniciar y re-provisionar
+```
 
 ---
 

@@ -76,6 +76,10 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", 
     path: "provision/configure-windows.ps1"
 
+  # Provisioning: Install development tools
+  config.vm.provision "shell", 
+    path: "provision/install-dev-tools.ps1"
+
   # Post-provisioning: Display connection information
   config.vm.post_up_message = <<-MESSAGE
     ========================================
