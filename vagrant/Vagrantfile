@@ -1,56 +1,101 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+# Windows 10 Lab Environment for Batch Script Testing
+# This Vagrantfile creates a Windows 10 VM optimized for console administration
+
 Vagrant.configure("2") do |config|
-  # Selecciona el box de Windows 10 más popular y mantenido
-  # Carga variables desde .env.vagrant si existe
+  # Load environment variables from .env.vagrant file
   env_vars = {}
   env_file = File.join(File.dirname(__FILE__), ".env.vagrant")
+  
   if File.exist?(env_file)
     File.readlines(env_file).each do |line|
       next if line.strip.start_with?("#") || line.strip.empty?
       k, v = line.strip.split('=', 2)
-      env_vars[k] = v
+      env_vars[k] = v if k && v
     end
   end
 
+  # Box configuration
   config.vm.box = env_vars["VAGRANT_BOX"] || "gusztavvargadr/windows-10"
   config.vm.box_version = env_vars["VAGRANT_BOX_VERSION"] || "2506.0.0"
 
-  # Provider VirtualBox
+  # VirtualBox provider configuration
   config.vm.provider "virtualbox" do |vb|
-    vb.name = env_vars["VAGRANT_VM_NAME"] || "Win11-BatchLab"
+    vb.name = env_vars["VAGRANT_VM_NAME"] || "Win10-BatchLab"
     vb.memory = (env_vars["VAGRANT_VM_RAM"] || 16384).to_i
     vb.cpus = (env_vars["VAGRANT_VM_CPUS"] || 4).to_i
+    
+    # Optimize graphics and performance
     vb.customize ["modifyvm", :id, "--vram", "128"]
     vb.customize ["modifyvm", :id, "--ioapic", "on"]
     vb.customize ["modifyvm", :id, "--graphicscontroller", "vmsvga"]
-    # vb.customize ["modifyvm", :id, "--hdd", env_vars["VAGRANT_VM_DISK"] || "40GB"]
+    
+    # Enable clipboard and drag & drop for better UX
+    vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
+    vb.customize ["modifyvm", :id, "--draganddrop", "bidirectional"]
+    
+    # Note: Disk size is managed by the box, not through modifyvm
+    # The VAGRANT_VM_DISK_SIZE variable is kept for reference
   end
 
-  # Habilitar acceso RDP (puerto 3389)
-  config.vm.network "forwarded_port", guest: 3389, host: 3389, auto_correct: true
+  # Network configuration
+  # RDP access (auto-correct port if 3389 is busy)
+  rdp_port = (env_vars["VAGRANT_RDP_PORT"] || 3389).to_i
+  config.vm.network "forwarded_port", guest: 3389, host: rdp_port, auto_correct: true
+  
+  # Host-only network for better isolation
+  host_only_ip = env_vars["VAGRANT_HOST_ONLY_IP"] || "192.168.56.10"
+  config.vm.network "private_network", ip: host_only_ip
 
-  # Sin carpetas compartidas por defecto (seguridad)
+  # Disable shared folders for security (scripts are copied during provisioning)
   config.vm.synced_folder ".", "/vagrant", disabled: true
 
-
-  # Provisión básica: crea usuario seguro para pruebas y habilita RDP
-  config.vm.provision "shell",
-    inline: (
-      'net user %VAGRANT_WIN_USER% %VAGRANT_WIN_PASS% /add && '
-      'net localgroup Administradores %VAGRANT_WIN_USER% /add && '
-      'net user %VAGRANT_WIN_USER% /active:yes && '
-      'net user %VAGRANT_WIN_USER% /passwordchg:no && '
-      'net user %VAGRANT_WIN_USER% /passwordreq:yes && '
-      'reg add "HKLM\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f && '
-      'netsh advfirewall firewall set rule group="Remote Desktop" new enable=Yes'
-    ),
+  # Provisioning: Create user and enable RDP
+  config.vm.provision "shell", 
+    path: "provision/create-user.ps1",
     env: {
       "VAGRANT_WIN_USER" => env_vars["VAGRANT_WIN_USER"] || "batchtester",
       "VAGRANT_WIN_PASS" => env_vars["VAGRANT_WIN_PASS"] || "P@ssw0rd123"
     }
 
-  # Provisión adicional: habilita PowerShell y copia scripts
-  config.vm.provision "file", source: "../scripts", destination: "C:/BatchScripts"
+  # Provisioning: Install VirtualBox Guest Additions
+  config.vm.provision "shell", 
+    path: "provision/install-guest-additions.ps1"
+
+  # Provisioning: Copy scripts to VM
+  scripts_source = env_vars["VAGRANT_SCRIPTS_PATH"] || "../scripts"
+  scripts_dest = env_vars["VAGRANT_SCRIPTS_DESTINATION"] || "C:/BatchScripts"
+  
+  config.vm.provision "file", 
+    source: scripts_source, 
+    destination: scripts_dest
+
+  # Provisioning: Configure Windows for development
+  config.vm.provision "shell", 
+    path: "provision/configure-windows.ps1"
+
+  # Post-provisioning: Display connection information
+  config.vm.post_up_message = <<-MESSAGE
+    ========================================
+    Windows 10 Lab Environment Ready!
+    ========================================
+    
+    VM Name: #{env_vars["VAGRANT_VM_NAME"] || "Win10-BatchLab"}
+    RDP Host: 127.0.0.1
+    RDP Port: #{rdp_port} (use 'vagrant port' to verify)
+    Username: #{env_vars["VAGRANT_WIN_USER"] || "batchtester"}
+    Password: #{env_vars["VAGRANT_WIN_PASS"] || "P@ssw0rd123"}
+    
+    Scripts Location: #{scripts_dest}
+    
+    Commands:
+    - vagrant rdp          # Connect via RDP
+    - vagrant ssh          # Connect via SSH (if available)
+    - vagrant halt         # Shutdown VM
+    - vagrant destroy -f   # Remove VM completely
+    
+    ========================================
+  MESSAGE
 end
